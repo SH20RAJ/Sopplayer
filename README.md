@@ -1,2 +1,2 @@
 # Sopplayer
-A VideoJs Custom Skin -  Sopplayer
+A VideoJs Custom Skin Collection -  Sopplayer
