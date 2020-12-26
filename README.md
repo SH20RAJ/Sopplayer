@@ -190,8 +190,7 @@
             style="box-sizing: border-box; color: #bbbbbb; display: inline-block; font-size: 13px;"><span
               class="ng-binding ng-scope" ng-if="!tab.status"
               style="box-sizing: border-box; color: #ce2025; display: inline-block; font-weight: 700; padding: 2px 5px 5px; text-decoration: none;">SEE
-              HOW FULL<a href="https://docs.afterglowplayer.com/" ng-click="choose($index)"
-                style="box-sizing: border-box; color: #ce2025; display: inline-block; font-weight: 700; padding: 2px 5px 5px; text-decoration: none;">HTML</a>&nbsp;WILL
+              HOW FULL HTML WILL
               LOOK LIKE</span></div>
         </div>
         <div class="ng-scope" ng-repeat="tab in data.codes track by $id($index)" ng-show="$index==current"
