@@ -1,5 +1,35 @@
-<h2 style="text-align: center;"><span style="font-weight: normal;">Sopplayer Integration - HTML5 Stylish Video
-    Player</span></h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> Sopplayer - HTML5 Stylish Video Player </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="svg/play.svg" />
+  <link href="sopplayer.css" rel="stylesheet" />
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+</head>
+  <body>
+    <div class="container">
+      <center>
+    <video id="my-video" class="video-js" controls preload="auto" data-setup="{}" width="500px">
+      <source src="sample.mp4" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+        </center>
+      <br><br>
+    <script src="sopplayer.js"></script>
+    <div id="integration">
+      <h2 style="text-align: center;"><span style="font-weight: normal;">Sopplayer Integration - HTML5 Stylish Video
+    Player</span></h2><br><br>
+      
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container"
   style="margin-left: auto; margin-right: auto;">
   <tbody>
@@ -202,3 +232,8 @@
   </div>
 </div>
 <p>&nbsp;</p>
+    </div>
+</div>
+</body>
+
+</html>
