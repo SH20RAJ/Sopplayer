@@ -16,7 +16,7 @@
     </tr>
   </tbody>
 </table><br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Tmj2QOXE6EU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ <br>See Video Documentation :- https://youtu.be/Tmj2QOXE6EU <br>
 <div>Steps :-&nbsp;</div>
 <div><br /></div>
 <div>&nbsp;<span>&nbsp;&nbsp; </span>1. Use&nbsp;<span
