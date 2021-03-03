@@ -17302,3 +17302,5 @@ document.querySelector("video").addEventListener("contextmenu", (event) => {
       b && (b.CDN_VERSION = "7.10.2")
    }(window)
 }();
+   
+   console.log(`Add Sopplayer To Your Website Easily :- https://sh20raj.github.io/Sopplayer/`);
