@@ -5,6 +5,7 @@
  
  - Source :- [https://github.com/dtube/embed](https://github.com/dtube/embed)
  - Codepen :- [https://codepen.io/SH20RAJ/pen/vYJVOYK?editors=1000](https://codepen.io/SH20RAJ/pen/vYJVOYK?editors=1000)
+ - GitHub :- [https://github.com/SH20RAJ/Sopplayer/blob/main/dtube/index.md](https://github.com/SH20RAJ/Sopplayer/blob/main/dtube/index.md)
  
  - Know More about Video.JS Features and Installation :- [https://codexdindia.blogspot.com/search/label/Video.js](https://codexdindia.blogspot.com/search/label/Video.js)
 ## Installation
