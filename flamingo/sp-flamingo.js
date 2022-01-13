@@ -11,7 +11,7 @@
  */
 
  //Here is the Style Creation
-var vjs_css = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/flamingo/sp-flamingo.min.css"/>`;
+var vjs_css = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/flamingo/sp-flamingo.css"/>`;
 function CreateStyle2020() {
      document.querySelector("head").insertAdjacentHTML("beforeend", vjs_css);
  }
