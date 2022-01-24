@@ -207,4 +207,4 @@
 </div>
 <p>&nbsp;</p>
 
-Dev.to Article :- https://dev.to/sh20raj/sopplayer-integration-html5-stylish-video-player-21g4
+Dev.to Article :- <a href="https://dev.to/sh20raj/sopplayer-integration-html5-stylish-video-player-21g4">https://dev.to/sh20raj/sopplayer-integration-html5-stylish-video-player-21g4</a>
