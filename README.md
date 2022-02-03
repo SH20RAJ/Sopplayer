@@ -3,6 +3,8 @@
       
 ### See All SopProducts :- https://sh20raj.github.io/SopProducts/
 
+### Sopplayer Players :- https://sh20raj.github.io/Sopplayer/players/
+
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container"
   style="margin-left: auto; margin-right: auto;">
   <tbody>
