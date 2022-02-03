@@ -31,10 +31,24 @@
         </center>
       <br><br>
     <script src="sopplayer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+      
+<div id="list"></div>
+<script>
+fetch('https://raw.githubusercontent.com/SH20RAJ/Sopplayer/main/players/README.md').then(response => response.text())
+  .then(data => {
+  console.log(data);
+  var converter = new showdown.Converter();
+var md = data;
+var html = converter.makeHtml(md);
+  document.querySelector('#list').innerHTML = html;
+});
+</script>
+      
+      ---
 <div id="mypost"></div>
 <script>
-fetch('README.md').then(response => response.text())
+fetch('https://raw.githubusercontent.com/SH20RAJ/Sopplayer/main/README.md').then(response => response.text())
   .then(data => {
   console.log(data);
   var converter = new showdown.Converter();
