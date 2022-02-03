@@ -32,11 +32,11 @@ let preview=()=>{
     ply = getbase();
     let link = location.href+'?play='+ply;
     console.log('<iframe src="'+link+'" width="100%" height="100%" frameborder="0"></iframe>');
-    s('preview').innerHTML='<iframe src="'+link+'" width="100%" height="500px" frameborder="0"></iframe>'
+    s('preview').innerHTML='<iframe src="'+link+'" width="100%" height="700px" frameborder="0"></iframe>'
 }
 
 let embed=()=>{
     ply = getbase();
     let link = location.href+'?play='+ply;
-    s('code').innerText='<iframe cite="'+location.href+'" src="'+link+'" width="100%" height="500px" frameborder="0"></iframe>'
+    s('code').innerText='<iframe cite="'+location.href+'" src="'+link+'" width="853" height="480" title="SopPlayer video player - '+s('vidtitle').value+'" frameborder="0" scrolling="no" style="overflow: hidden" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 }
