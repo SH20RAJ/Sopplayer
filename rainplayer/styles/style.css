@@ -1,6 +1,7 @@
 @import url('./buttons.css');
 @import url('./player.css');
 @import url('./texts.css');
+@import url('./SopCss.css');
 
 html {
   box-sizing: border-box;
@@ -15,13 +16,14 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  color: white;
+  color: rgb(4, 36, 46);
 }
 
 .wrapper {
   width: 100vw;
   height: 100vh;
   background-color: black;
+  color: aliceblue;
 }
 
 .video {
