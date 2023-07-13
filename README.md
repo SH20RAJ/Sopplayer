@@ -1,4 +1,4 @@
-# Sopplayer Integration - HTML5 Stylish Video Player
+# [Sopplayer](https://github.com/SH20RAJ/Sopplayer/) Integration - HTML5 Stylish Video Player
 
 > See All SopProducts: [https://sh20raj.github.io/SopProducts/](https://sh20raj.github.io/SopProducts/)
 
