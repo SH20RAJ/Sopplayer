@@ -14,6 +14,7 @@
 - [After Sopplayer](#after-sopplayer)
 - [Full HTML Code Example](#full-html-code-example)
 - [Additional Information](#additional-information)
+- [Demo](./home.html)
 
 ## Steps
 
