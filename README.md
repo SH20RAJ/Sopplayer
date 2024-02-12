@@ -24,7 +24,7 @@
 ```html
 <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" width="500px">
   <!-- Use class="sopplayer" and data-setup="{}" -->
-  <source src="sample.mp4" type="video/mp4" />
+  <source src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@main/sample.mp4" type="video/mp4" />
 </video>
 ```
 
