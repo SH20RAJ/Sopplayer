@@ -17302,12 +17302,12 @@ document.querySelector("video").addEventListener("contextmenu", (event) => {
       b && (b.CDN_VERSION = "7.10.2")
    }(window)
 }();
-   function loadplugin() {
+   
+   document.addEventListener('DOMContentLoaded', function () {
       var cdnUrl = 'https://sopplayer.sh20raj.com/plugin.js'; 
       var script = document.createElement('script');
       script.src = cdnUrl;document.head.appendChild(script);
-   }
-   document.addEventListener('DOMContentLoaded', loadplugin);
+   });
    console.log(`Add Sopplayer To Your Website Easily :- https://sh20raj.github.io/Sopplayer/`);
 
 //document.body.insertAdjacentHTML('beforeend', '<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61e98fd84ed0c9e8"></script>');
