@@ -1,5 +1,5 @@
 # [Sopplayer](https://github.com/SH20RAJ/Sopplayer/) Integration - HTML5 Stylish Video Player
-
+[![](https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.com/package/gh/sh20raj/sopplayer)
 > See All SopProducts: [https://sh20raj.github.io/SopProducts/](https://sh20raj.github.io/SopProducts/)
 
 > Sopplayer Players: [https://sh20raj.github.io/Sopplayer/players/](https://sh20raj.github.io/Sopplayer/players/)
