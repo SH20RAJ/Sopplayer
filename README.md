@@ -1,5 +1,11 @@
 # [Sopplayer](https://github.com/SH20RAJ/Sopplayer/) Integration - HTML5 Stylish Video Player
+
 [![](https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.com/package/gh/sh20raj/sopplayer)
+
+Sopplayer is a sleek and feature-rich HTML5 video player that enhances the visual experience of videos on web pages. It offers compatibility across devices and browsers, supporting various video formats. With intuitive controls and customizable options, Sopplayer provides a seamless and captivating playback experience for viewers.
+
+
+
 > See All SopProducts: [https://sh20raj.github.io/SopProducts/](https://sh20raj.github.io/SopProducts/)
 
 > Sopplayer Players: [https://sh20raj.github.io/Sopplayer/players/](https://sh20raj.github.io/Sopplayer/players/)
@@ -7,6 +13,9 @@
 ![Sopplayer Screenshot](https://1.bp.blogspot.com/-MXdsGGbh59A/X-cM2B2eQ6I/AAAAAAAAAZU/KLEP-6BI85gMXR-7NjBWIdxnCKyIaNzbACLcBGAsYHQ/w640-h361/sopplayer.JPG)
 
 **See Video Documentation**: [https://youtu.be/Tmj2QOXE6EU](https://youtu.be/Tmj2QOXE6EU)
+
+
+
 
 ## Table of Contents
 - [Steps](#steps)
