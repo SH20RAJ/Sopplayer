@@ -47,7 +47,7 @@ Sopplayer is a sleek and feature-rich HTML5 video player that enhances the visua
 4. Add the JavaScript CDN before the closing `</body>` tag.
 
 ```html
-<script src="https://rebrand.ly/SopPlayerJS"></script>
+<script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.js"></script>
 <!-- Here is the JavaScript Library -->
 ```
 
@@ -79,7 +79,7 @@ Here you have completed your Sopplayer Integration.
       <source src="sample.mp4" type="video/mp4" />
     </video>
   </center>
-  <script src="https://rebrand.ly/SopPlayerJS"></script>
+  <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.js"></script>
   <!-- Here is the JavaScript Library -->
 </body>
 </html>
@@ -105,7 +105,7 @@ See how the full HTML will look like:
       <source src="sample.mp4" type="video/mp4" />
     </video>
   </center>
-  <script src="https://rebrand.ly/SopPlayerJS"></script>
+  <script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/sopplayer.min.js"></script>
   <!-- Here is the JavaScript Library -->
 </body>
 </html>
