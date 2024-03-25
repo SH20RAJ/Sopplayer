@@ -1019,6 +1019,9 @@ body.vjs-full-window {
   /* Non-prefixed version, currently supported by Chrome and Opera */
   user-select: none;
   background-color: #f78470;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
 }
 
 .sopplayer .vjs-slider.disabled {
