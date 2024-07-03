@@ -2,6 +2,7 @@
 
 [![](https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.com/package/gh/sh20raj/sopplayer)
 
+
 Sopplayer is a sleek and feature-rich HTML5 video player that enhances the visual experience of videos on web pages. It offers compatibility across devices and browsers, supporting various video formats. With intuitive controls and customizable options, Sopplayer provides a seamless and captivating playback experience for viewers.
 
 
@@ -114,4 +115,9 @@ See how the full HTML will look like:
 
 Try AudiPlay :- [AudiPlay - A Free HTML5 Audio Player](https://github.com/SH20RAJ/AudiPlay)https://github.com/SH20RAJ/AudiPlay
 
+<p align="center">
+ <a href="https://www.producthunt.com/posts/sopplayer?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sopplayer" target="_blank">
 
+<img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=467939&theme=light" alt="Sopplayer - HTML5&#0032;Stylish&#0032;Video&#0032;Player&#0032;&#0124;&#0032;Sopplayer | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+ 
+</p>
