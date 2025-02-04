@@ -1,7 +1,7 @@
 # [Sopplayer](https://github.com/SH20RAJ/Sopplayer/) Integration - HTML5 Stylish Video Player
 
 [![](https://data.jsdelivr.com/v1/package/gh/sh20raj/sopplayer/badge)](https://www.jsdelivr.com/package/gh/sh20raj/sopplayer)
-
+[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fsopplayer&labelColor=%2337d67a&countColor=%23ba68c8&style=flat)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FSH20RAJ%2Fsopplayer)
 
 Sopplayer is a sleek and feature-rich HTML5 video player that enhances the visual experience of videos on web pages. It offers compatibility across devices and browsers, supporting various video formats. With intuitive controls and customizable options, Sopplayer provides a seamless and captivating playback experience for viewers.
 
@@ -15,6 +15,7 @@ Sopplayer is a sleek and feature-rich HTML5 video player that enhances the visua
 
 **See Video Documentation**: [https://youtu.be/Tmj2QOXE6EU](https://youtu.be/Tmj2QOXE6EU)
 
+**Player Demo**: https://codepen.io/SH20RAJ/pen/QwLRpyx
 
 
 
@@ -113,7 +114,7 @@ See how the full HTML will look like:
 ```
 
 
-Try AudiPlay :- [AudiPlay - A Free HTML5 Audio Player](https://github.com/SH20RAJ/AudiPlay)https://github.com/SH20RAJ/AudiPlay
+Try AudiPlay :- [AudiPlay - A Free HTML5 Audio Player](https://github.com/SH20RAJ/AudiPlay)
 
 <p align="center">
  <a href="https://www.producthunt.com/posts/sopplayer?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sopplayer" target="_blank">
