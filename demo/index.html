@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer v2.0 - Interactive Playground &amp; Feature Showcase</title>
+  <meta name="description" content="Explore Sopplayer v2.0 interactive features: themes, accessible keyboard navigation, captions, picture-in-picture, and real-time event telemetry.">
+  <link rel="icon" href="../svg/play.svg" />
+  <link rel="stylesheet" href="../dist/sopplayer.min.css">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --surface: #131b2e;
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      border-bottom: 1px solid var(--surface-border);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(11, 15, 25, 0.8);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .logo-badge {
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    nav a:hover, nav a.active {
+      color: var(--primary);
+    }
+    .main-layout {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 32px;
+    }
+    @media (max-width: 900px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .player-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .demo-tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--surface-border);
+      padding-bottom: 8px;
+      overflow-x: auto;
+    }
+    .demo-tab {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .demo-tab.active {
+      background: var(--surface);
+      color: var(--primary);
+      border: 1px solid var(--surface-border);
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .panel-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .control-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    select, button.action-btn {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--surface-border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      cursor: pointer;
+    }
+    select:focus, button.action-btn:focus {
+      border-color: var(--primary);
+    }
+    .event-log {
+      height: 180px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 6px;
+      border: 1px solid var(--surface-border);
+      padding: 10px;
+      font-family: monospace;
+      font-size: 11px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4px;
+    }
+    .log-entry {
+      color: #38bdf8;
+    }
+    .log-entry span {
+      color: #64748b;
+    }
+    pre {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      overflow-x: auto;
+      border: 1px solid var(--surface-border);
+      color: #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../" class="logo-group">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="#38bdf8"><path d="M8 5.14v14l11-7-11-7z"/></svg>
+      <strong style="font-size: 18px; letter-spacing: -0.5px;">Sopplayer</strong>
+      <span class="logo-badge">v2.0.0</span>
+    </a>
+    <nav>
+      <a href="./" class="active">Playground</a>
+      <a href="./themes/">Themes</a>
+      <a href="./accessibility/">Accessibility</a>
+      <a href="./captions/">Captions</a>
+      <a href="./fullscreen/">Fullscreen &amp; PiP</a>
+      <a href="./integrations/">Integrations</a>
+      <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <div class="main-layout">
+    <div class="player-section">
+      <div class="demo-tabs">
+        <a href="./" class="demo-tab active">Interactive Player</a>
+        <a href="./basic/" class="demo-tab">Minimal Setup</a>
+        <a href="./themes/" class="demo-tab">Theme Gallery</a>
+        <a href="./accessibility/" class="demo-tab">A11y &amp; Keyboard</a>
+        <a href="./captions/" class="demo-tab">Subtitles (VTT)</a>
+        <a href="./integrations/" class="demo-tab">Framework Recipes</a>
+      </div>
+
+      <video id="player" poster="../sample.png" preload="metadata">
+        <source src="../sample.mp4" type="video/mp4" />
+        <track kind="subtitles" label="English" srclang="en" src="./captions/subtitles-en.vtt" default>
+        <track kind="subtitles" label="Español" srclang="es" src="./captions/subtitles-es.vtt">
+        <p>Your browser does not support HTML5 video.</p>
+      </video>
+
+      <div class="panel">
+        <h4 class="panel-title">Copy Integration Code</h4>
+        <pre><code id="embed-snippet">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
+
+&lt;video id="my-video" src="video.mp4" poster="poster.jpg"&gt;&lt;/video&gt;
+&lt;script&gt;
+  const player = new Sopplayer('#my-video', {
+    theme: 'default'
+  });
+&lt;/script&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="panel">
+        <h4 class="panel-title">Live Controls</h4>
+
+        <div class="control-group">
+          <label for="theme-select">Player Theme</label>
+          <select id="theme-select">
+            <option value="default">Default (Obsidian Glass)</option>
+            <option value="flamingo">Flamingo (Rose / Coral)</option>
+            <option value="forest">Forest (Emerald Nature)</option>
+            <option value="city">City (Urban Ruby / Amber)</option>
+            <option value="sea">Sea (Deep Azure)</option>
+            <option value="fantasy">Fantasy (Electric Violet)</option>
+            <option value="minimal">Minimal (Monochrome)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="aspect-select">Aspect Ratio</label>
+          <select id="aspect-select">
+            <option value="16:9">16:9 (Standard Widescreen)</option>
+            <option value="4:3">4:3 (Classic TV)</option>
+            <option value="1:1">1:1 (Square)</option>
+            <option value="21:9">21:9 (Cinematic Ultrawide)</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>Keyboard Shortcuts</label>
+          <button type="button" class="action-btn" id="open-shortcuts">Press [?] or Click to View</button>
+        </div>
+
+        <div class="control-group">
+          <label>Event Telemetry</label>
+          <div class="event-log" id="event-log"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player', {
+      theme: 'default'
+    });
+
+    // Event logger
+    const logEl = document.getElementById('event-log');
+    function logEvent(name, detail = '') {
+      const entry = document.createElement('div');
+      entry.className = 'log-entry';
+      const time = new Date().toLocaleTimeString();
+      entry.innerHTML = `<span>[${time}]</span> ${name} ${detail}`;
+      logEl.appendChild(entry);
+    }
+
+    ['play', 'pause', 'timeupdate', 'volumechange', 'ratechange', 'fullscreenchange', 'pipchange'].forEach(evt => {
+      player.on(evt, (d) => {
+        if (evt === 'timeupdate') {
+          // log less frequently
+          if (Math.floor(player.currentTime) % 3 === 0 && Math.floor(player.currentTime) !== window._lastLogTime) {
+            window._lastLogTime = Math.floor(player.currentTime);
+            logEvent(evt, `${player.currentTime.toFixed(1)}s / ${player.duration.toFixed(1)}s`);
+          }
+        } else {
+          logEvent(evt, JSON.stringify(d || ''));
+        }
+      });
+    });
+
+    // Theme selector
+    const themeSelect = document.getElementById('theme-select');
+    themeSelect.addEventListener('change', (e) => {
+      player.setTheme(e.target.value);
+    });
+
+    // Aspect ratio selector
+    const aspectSelect = document.getElementById('aspect-select');
+    aspectSelect.addEventListener('change', (e) => {
+      ['16-9', '4-3', '1-1', '21-9'].forEach(r => player.container.classList.remove(`sp-aspect-${r}`));
+      player.container.classList.add(`sp-aspect-${e.target.value.replace(':', '-')}`);
+    });
+
+    document.getElementById('open-shortcuts').addEventListener('click', () => {
+      player.toggleShortcuts();
+    });
+  </script>
+</body>
+</html>

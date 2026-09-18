@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Fullscreen &amp; Picture-in-Picture Demo</title>
+  <link rel="icon" href="../../svg/play.svg" />
+  <link rel="stylesheet" href="../../dist/sopplayer.min.css">
+  <style>
+    body {
+      background: #0b0f19;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    button.demo-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+    button.demo-btn:hover {
+      background: rgba(56, 189, 248, 0.25);
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../">&larr; Back to Playground</a>
+      <h1 style="margin-top: 12px;">Fullscreen &amp; Picture-in-Picture</h1>
+      <p style="color: #94a3b8;">Supports standardized Fullscreen API with vendor fallbacks and Picture-in-Picture windowing.</p>
+    </header>
+
+    <video id="player" poster="../../sample.png" preload="metadata">
+      <source src="../../sample.mp4" type="video/mp4" />
+      <p>Your browser does not support HTML5 video.</p>
+    </video>
+
+    <div class="btn-row">
+      <button class="demo-btn" id="btn-fullscreen">Toggle Fullscreen (F)</button>
+      <button class="demo-btn" id="btn-pip">Toggle Picture-in-Picture (P)</button>
+    </div>
+
+    <div class="card">
+      <h3>Programmatic Control</h3>
+      <p style="color: #94a3b8;">Trigger Fullscreen or PiP programmatically via the player instance:</p>
+      <pre style="background: #000; padding: 12px; border-radius: 6px; color: #f8fafc;"><code>// Toggle Fullscreen
+player.toggleFullscreen();
+
+// Toggle Picture-in-Picture
+player.togglePip();
+
+// Listen to changes
+player.on('fullscreenchange', (isFullscreen) => {
+  console.log('Fullscreen:', isFullscreen);
+});
+
+player.on('pipchange', (isPip) => {
+  console.log('Picture-in-Picture:', isPip);
+});</code></pre>
+    </div>
+  </div>
+
+  <script src="../../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player');
+    document.getElementById('btn-fullscreen').addEventListener('click', () => {
+      player.toggleFullscreen();
+    });
+    document.getElementById('btn-pip').addEventListener('click', () => {
+      player.togglePip();
+    });
+  </script>
+</body>
+</html>

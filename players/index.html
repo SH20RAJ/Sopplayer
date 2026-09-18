@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Players & Skins Showcase</title>
+  <link rel="icon" href="../svg/play.svg" />
+  <link rel="stylesheet" href="../dist/sopplayer.min.css">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #38bdf8;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      margin-top: 16px;
+    }
+    .nav-links a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary);
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+    .card-actions a {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--primary);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .card-actions a:hover {
+      background: rgba(56, 189, 248, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sopplayer Players &amp; Skins Gallery</h1>
+      <p class="subtitle">Explore all modern themes, standalone players, and legacy skins available in the Sopplayer ecosystem.</p>
+      <div class="nav-links">
+        <a href="../">&larr; Sopplayer Home</a>
+        <a href="../demo/">Interactive Demo</a>
+        <a href="https://github.com/SH20RAJ/Sopplayer">GitHub</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <div>
+          <h3>Default Obsidian Glass</h3>
+          <p>The modern flagship theme for Sopplayer v2. Clean dark mode, smooth glassmorphism, responsive controls, and high-contrast accessibility.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/">Launch Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Flamingo Skin</h3>
+          <p>A vibrant coral-rose theme with modern rounded control buttons and subtle ambient glow.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../flamingo/">Launch Flamingo Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Rainplayer</h3>
+          <p>A standalone player application featuring embed URL generation and preview mode, hardened against XSS.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../rainplayer/">Launch Rainplayer</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Afterglow</h3>
+          <p>Cinematic player styling with lightbox support and compact control bar.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../afterglow/">Launch Afterglow Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Forest Skin</h3>
+          <p>An emerald and sage nature theme inspired by lush outdoor aesthetics.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/themes/?theme=forest">Launch Forest Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>City Skin</h3>
+          <p>A metropolitan warm amber and ruby night aesthetic.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/themes/?theme=city">Launch City Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Sea Skin</h3>
+          <p>Deep oceanic azure theme with cool translucent controls.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/themes/?theme=sea">Launch Sea Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Fantasy Skin</h3>
+          <p>Neon cyberpunk and electric violet aesthetic.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/themes/?theme=fantasy">Launch Fantasy Demo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Minimal Monochrome</h3>
+          <p>Ultra-clean, high-contrast monochrome design for documentation and minimalist publications.</p>
+        </div>
+        <div class="card-actions">
+          <a href="../demo/themes/?theme=minimal">Launch Minimal Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
