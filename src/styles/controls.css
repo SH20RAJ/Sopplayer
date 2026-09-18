@@ -1,0 +1,312 @@
+/**
+ * Sopplayer v2.0 - Controls & UI Components
+ */
+
+/* Controls Overlay Bar */
+.sp-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--sp-space-2) var(--sp-space-4) var(--sp-space-3);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-space-2);
+  z-index: var(--sp-z-controls);
+  transition: opacity var(--sp-transition-normal), transform var(--sp-transition-normal);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.sp-player.sp-playing.sp-user-inactive .sp-controls {
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+}
+
+/* Controls Rows */
+.sp-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-space-3);
+}
+
+.sp-controls-left,
+.sp-controls-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-space-2);
+}
+
+/* Buttons */
+.sp-button {
+  background: transparent;
+  border: none;
+  color: var(--sp-color-text);
+  width: var(--sp-btn-size);
+  height: var(--sp-btn-size);
+  min-width: 36px;
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--sp-radius-sm);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color var(--sp-transition-fast), color var(--sp-transition-fast), transform var(--sp-transition-fast);
+}
+
+.sp-button:hover {
+  background-color: var(--sp-color-surface-hover);
+  color: #fff;
+}
+
+.sp-button:active {
+  transform: scale(0.95);
+}
+
+.sp-button:focus-visible {
+  outline: var(--sp-focus-ring);
+  outline-offset: var(--sp-focus-offset);
+}
+
+.sp-button.sp-active {
+  color: var(--sp-color-primary);
+}
+
+/* Big Center Play Button */
+.sp-big-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: var(--sp-radius-full);
+  background: var(--sp-color-bg);
+  backdrop-filter: var(--sp-glass-backdrop);
+  -webkit-backdrop-filter: var(--sp-glass-backdrop);
+  border: 1px solid var(--sp-color-border);
+  color: var(--sp-color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: var(--sp-z-bigplay);
+  box-shadow: var(--sp-shadow-lg);
+  transition: transform var(--sp-transition-normal), background-color var(--sp-transition-normal), border-color var(--sp-transition-normal);
+}
+
+.sp-big-play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+  border-color: var(--sp-color-primary);
+  background-color: var(--sp-color-surface-hover);
+}
+
+.sp-big-play-btn:focus-visible {
+  outline: var(--sp-focus-ring);
+  outline-offset: 4px;
+}
+
+.sp-big-play-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+}
+
+.sp-big-play-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Progress Bar */
+.sp-progress-container {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.sp-progress-container:focus-visible {
+  outline: none;
+}
+
+.sp-progress-container:focus-visible .sp-progress-track {
+  outline: var(--sp-focus-ring);
+  outline-offset: 2px;
+}
+
+.sp-progress-track {
+  position: relative;
+  width: 100%;
+  height: var(--sp-progress-height);
+  background-color: var(--sp-color-track);
+  border-radius: var(--sp-radius-full);
+  overflow: visible;
+  transition: height var(--sp-transition-fast);
+}
+
+.sp-progress-container:hover .sp-progress-track,
+.sp-progress-container.sp-is-scrubbing .sp-progress-track {
+  height: var(--sp-progress-height-hover);
+}
+
+.sp-progress-buffered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: var(--sp-color-buffer);
+  border-radius: var(--sp-radius-full);
+}
+
+.sp-progress-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: var(--sp-radius-full);
+  pointer-events: none;
+}
+
+.sp-progress-played {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: var(--sp-color-primary);
+  border-radius: var(--sp-radius-full);
+  box-shadow: 0 0 10px var(--sp-color-primary-glow);
+}
+
+.sp-progress-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%) scale(0);
+  width: var(--sp-thumb-size);
+  height: var(--sp-thumb-size);
+  background-color: #fff;
+  border-radius: var(--sp-radius-full);
+  box-shadow: var(--sp-shadow-sm);
+  transition: transform var(--sp-transition-fast);
+  pointer-events: none;
+}
+
+.sp-progress-container:hover .sp-progress-thumb,
+.sp-progress-container.sp-is-scrubbing .sp-progress-thumb {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.sp-progress-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0%;
+  transform: translateX(-50%);
+  background: var(--sp-color-bg);
+  color: var(--sp-color-text);
+  font-size: var(--sp-font-size-xs);
+  padding: 3px 6px;
+  border-radius: var(--sp-radius-xs);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--sp-transition-fast);
+  white-space: nowrap;
+  box-shadow: var(--sp-shadow-sm);
+  border: 1px solid var(--sp-color-border);
+}
+
+.sp-progress-container:hover .sp-progress-tooltip,
+.sp-progress-container.sp-is-scrubbing .sp-progress-tooltip {
+  opacity: 1;
+}
+
+/* Time Display */
+.sp-time-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+  font-size: var(--sp-font-size-xs);
+  color: var(--sp-color-text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--sp-radius-xs);
+  transition: color var(--sp-transition-fast);
+}
+
+.sp-time-display:hover {
+  color: var(--sp-color-text);
+}
+
+.sp-time-current {
+  color: var(--sp-color-text);
+  font-weight: 500;
+}
+
+/* Volume Control */
+.sp-volume-control {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-space-1);
+}
+
+.sp-volume-slider-container {
+  width: 0;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: width var(--sp-transition-normal), opacity var(--sp-transition-normal);
+}
+
+.sp-volume-control:hover .sp-volume-slider-container,
+.sp-volume-control:focus-within .sp-volume-slider-container,
+.sp-volume-slider-container.sp-is-dragging {
+  width: 64px;
+  opacity: 1;
+}
+
+.sp-volume-track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: var(--sp-color-track);
+  border-radius: var(--sp-radius-full);
+}
+
+.sp-volume-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--sp-color-text);
+  border-radius: var(--sp-radius-full);
+}
+
+.sp-volume-thumb {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: var(--sp-radius-full);
+  pointer-events: none;
+}

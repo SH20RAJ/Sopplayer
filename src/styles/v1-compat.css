@@ -1,0 +1,33 @@
+/**
+ * Sopplayer v2.0 - Backwards Compatibility Stylesheet
+ * Preserves styling and layouts for legacy Video.js and v1 integrations
+ */
+
+/* Support for legacy video.sopplayer elements */
+video.sopplayer,
+video.video-js {
+  display: block;
+  width: 100%;
+}
+
+/* Fallback mappings if legacy Video.js classes are rendered */
+.video-js .vjs-big-play-button {
+  cursor: pointer;
+  border-radius: var(--sp-radius-md, 8px);
+}
+
+.sopplayer .vjs-play-control .vjs-icon-placeholder:before {
+  content: "";
+  background-image: url('svg/play.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+
+.sopplayer .vjs-play-control.vjs-playing .vjs-icon-placeholder:before {
+  content: "";
+  background-image: url('svg/pause.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
