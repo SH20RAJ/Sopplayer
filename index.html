@@ -3,88 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sopplayer - Modern, Accessible &amp; Lightweight HTML5 Video Player</title>
-  <meta name="description" content="A modern, accessible, responsive, and lightweight HTML5 video player with zero runtime dependencies. Features customizable skins, full ARIA support, keyboard shortcuts, and backwards compatibility.">
-  <meta name="keywords" content="html5 video player, videojs alternative, accessible video player, javascript media player, sopplayer, custom video skins, web video">
-  <meta name="author" content="SH20RAJ">
+  <title>Sopplayer — Modern, Accessible &amp; Lightweight HTML5 Video Player</title>
+  <meta name="description" content="Ultra-lightweight (<40KB), accessible (WCAG 2.1 AA), and zero-dependency HTML5 video player with sleek customizable themes and complete backwards compatibility.">
+  <meta name="keywords" content="html5 video player, videojs alternative, accessible video player, web media player, sopplayer, custom video skins, zero dependencies, javascript video library, Shaswat Raj, SH20RAJ">
+  <meta name="author" content="Shaswat Raj">
+  <meta name="creator" content="Shaswat Raj">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
   <link rel="canonical" href="https://sh20raj.github.io/Sopplayer/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sh20raj.github.io/Sopplayer/">
-  <meta property="og:title" content="Sopplayer - Modern HTML5 Video Player">
-  <meta property="og:description" content="Ultra-lightweight, accessible, themeable HTML5 video player with zero dependencies.">
+  <meta property="og:title" content="Sopplayer — Modern, Accessible &amp; Lightweight HTML5 Video Player">
+  <meta property="og:description" content="Ultra-lightweight (<40KB), accessible (WCAG 2.1 AA), and zero-dependency HTML5 video player with sleek customizable themes.">
   <meta property="og:image" content="https://sh20raj.github.io/Sopplayer/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Sopplayer">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://sh20raj.github.io/Sopplayer/">
-  <meta name="twitter:title" content="Sopplayer - Modern HTML5 Video Player">
-  <meta name="twitter:description" content="Ultra-lightweight, accessible, themeable HTML5 video player with zero dependencies.">
+  <meta name="twitter:creator" content="@SH20RAJ">
+  <meta name="twitter:site" content="@SH20RAJ">
+  <meta name="twitter:title" content="Sopplayer — Modern, Accessible &amp; Lightweight HTML5 Video Player">
+  <meta name="twitter:description" content="Ultra-lightweight (<40KB), accessible (WCAG 2.1 AA), and zero-dependency HTML5 video player with sleek customizable themes.">
   <meta name="twitter:image" content="https://sh20raj.github.io/Sopplayer/og.png">
 
-  <link rel="icon" href="svg/play.svg" />
+  <!-- Favicon -->
+  <link rel="icon" href="svg/play.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="og.png">
+
+  <!-- Sopplayer Core Styles -->
   <link rel="stylesheet" href="dist/sopplayer.min.css">
 
+  <!-- JSON-LD Structured Data for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Sopplayer",
-    "operatingSystem": "All",
-    "applicationCategory": "MultimediaApplication",
-    "description": "Modern, accessible, responsive HTML5 video player with zero runtime dependencies.",
-    "url": "https://sh20raj.github.io/Sopplayer/",
-    "author": {
-      "@type": "Person",
-      "name": "SH20RAJ",
-      "url": "https://github.com/SH20RAJ"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Sopplayer",
+        "url": "https://sh20raj.github.io/Sopplayer/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web Browser (Chrome, Firefox, Safari, Edge)",
+        "softwareVersion": "2.0.0",
+        "description": "Ultra-lightweight, accessible (WCAG 2.1 AA), and zero-dependency HTML5 video player with 7 customizable themes and full backwards compatibility.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Shaswat Raj",
+          "alternateName": "SH20RAJ",
+          "url": "https://sh20raj.github.io/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Sopplayer",
+        "url": "https://sh20raj.github.io/Sopplayer/",
+        "author": {
+          "@type": "Person",
+          "name": "Shaswat Raj"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Sopplayer Showcase Video",
+        "description": "Interactive HTML5 video demonstration of Sopplayer playback features, theme customization, and keyboard accessibility.",
+        "thumbnailUrl": "https://sh20raj.github.io/Sopplayer/sample.png",
+        "uploadDate": "2026-09-18T00:00:00Z",
+        "contentUrl": "https://sh20raj.github.io/Sopplayer/sample.mp4"
+      }
+    ]
   }
   </script>
 
   <style>
     :root {
-      --bg-dark: #090d16;
-      --surface-dark: #111827;
-      --surface-card: rgba(17, 24, 39, 0.75);
+      --bg-canvas: #090d16;
+      --bg-surface: #0f1626;
+      --bg-surface-elevated: #162035;
       --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(56, 189, 248, 0.4);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
+      --text-faint: #64748b;
       --primary: #38bdf8;
       --primary-hover: #0ea5e9;
+      --accent: #818cf8;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 40px -10px rgba(56, 189, 248, 0.15);
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
-      background-color: var(--bg-dark);
+      background-color: var(--bg-canvas);
       color: var(--text-main);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: var(--font-sans);
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
-    a { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
 
-    /* Navigation */
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    /* Minimal Header */
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(9, 13, 22, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      background: rgba(9, 13, 22, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border-subtle);
     }
     .header-container {
-      max-width: 1200px;
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 12px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -93,503 +145,945 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #fff;
       font-weight: 700;
-      font-size: 1.25rem;
-      text-decoration: none;
-      letter-spacing: -0.5px;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
     }
-    .version-tag {
-      font-size: 11px;
-      background: rgba(56, 189, 248, 0.15);
+    .brand svg {
+      width: 20px;
+      height: 20px;
       color: var(--primary);
+    }
+    .badge-version {
+      font-size: 11px;
+      font-weight: 600;
       padding: 2px 8px;
       border-radius: 9999px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      font-weight: 600;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
     nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 20px;
     }
     nav a {
+      font-size: 0.875rem;
       color: var(--text-muted);
-      font-size: 0.9rem;
       font-weight: 500;
-      transition: color 0.15s;
     }
-    nav a:hover { color: #fff; text-decoration: none; }
-
-    /* Hero Section */
-    .hero {
-      padding: 80px 24px 40px;
-      text-align: center;
-      max-width: 960px;
-      margin: 0 auto;
+    nav a:hover {
+      color: var(--text-main);
     }
-    .hero-badge {
+    .btn-github {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      padding: 6px 14px;
+      padding: 5px 12px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+    }
+    .btn-github:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 64px 24px 32px;
+      text-align: center;
+    }
+    .pill-announcement {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
       border-radius: 9999px;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 500;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      color: var(--text-muted);
       margin-bottom: 24px;
     }
+    .pill-announcement span {
+      color: var(--primary);
+      font-weight: 600;
+    }
     .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.15;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
       font-weight: 800;
-      letter-spacing: -1px;
-      margin: 0 0 20px;
-      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      letter-spacing: -1.2px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .hero p {
-      font-size: 1.15rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
       color: var(--text-muted);
       max-width: 680px;
-      margin: 0 auto 36px;
+      margin: 0 auto 32px;
+      font-weight: 400;
     }
     .hero-actions {
       display: flex;
-      gap: 16px;
+      align-items: center;
       justify-content: center;
+      gap: 12px;
       flex-wrap: wrap;
-      margin-bottom: 50px;
+      margin-bottom: 48px;
     }
-    .btn {
+    .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.15s ease;
-    }
-    .btn-primary {
       background: var(--primary);
-      color: #090d16;
-      border: 1px solid var(--primary);
-      box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+      color: #040914;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease, transform 0.1s ease;
     }
     .btn-primary:hover {
       background: var(--primary-hover);
-      text-decoration: none;
       transform: translateY(-1px);
     }
     .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: rgba(255, 255, 255, 0.05);
-      color: var(--text-main);
       border: 1px solid var(--border-subtle);
-      backdrop-filter: blur(8px);
+      color: var(--text-main);
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease;
     }
     .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
-      text-decoration: none;
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.15);
     }
 
-    /* Player Showcase Card */
-    .player-showcase {
+    /* Metric Bar */
+    .metric-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
       max-width: 860px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
+      margin: 0 auto 48px;
     }
-    .player-frame {
-      background: #000;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--border-subtle);
-    }
-    .theme-bar {
-      margin-top: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .theme-chip {
-      background: rgba(30, 41, 59, 0.6);
+    .metric-item {
+      background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      padding: 6px 14px;
-      border-radius: 9999px;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .theme-chip:hover, .theme-chip.active {
-      background: var(--primary);
-      color: #090d16;
-      border-color: var(--primary);
-      font-weight: 500;
-    }
-
-    /* Features Grid */
-    .features-section {
-      max-width: 1100px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
-    }
-    .section-title {
+      border-radius: var(--radius-md);
+      padding: 14px 10px;
       text-align: center;
-      margin-bottom: 48px;
     }
-    .section-title h2 {
-      font-size: 2rem;
-      margin: 0 0 12px;
+    .metric-value {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
       letter-spacing: -0.5px;
     }
-    .section-title p {
+    .metric-label {
+      font-size: 0.75rem;
       color: var(--text-muted);
-      margin: 0;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-    .feature-card {
-      background: var(--surface-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 28px;
-      backdrop-filter: blur(8px);
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .feature-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(56, 189, 248, 0.4);
-    }
-    .feature-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: rgba(56, 189, 248, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: var(--primary);
-    }
-    .feature-card h3 {
-      font-size: 1.15rem;
-      margin: 0 0 10px;
-    }
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin: 0;
-      line-height: 1.5;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
     }
 
-    /* Installation Section */
-    .install-section {
-      max-width: 860px;
-      margin: 0 auto 100px;
-      padding: 0 20px;
+    /* Showcase Player Section */
+    .showcase-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
     }
-    .code-box {
-      background: #000;
+    .player-frame {
+      position: relative;
+      background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      border-radius: 10px;
+      border-radius: var(--radius-lg);
+      padding: 12px;
+      box-shadow: var(--shadow-card), var(--shadow-glow);
+      overflow: hidden;
+    }
+    .player-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding: 4px 8px;
+    }
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    .theme-studio {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+    }
+    .theme-studio-title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+    .theme-pills {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .theme-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .theme-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-main);
+    }
+    .theme-btn.active {
+      background: var(--primary);
+      color: #040914;
+      border-color: var(--primary);
+      font-weight: 600;
+    }
+    .btn-shortcuts-hint {
+      background: transparent;
+      border: 1px dashed var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      cursor: pointer;
+      margin-left: auto;
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-shortcuts-hint:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Quickstart Installation */
+    .section-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .section-heading {
+      margin-bottom: 24px;
+    }
+    .section-heading h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .section-heading p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Code Card */
+    .code-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
       overflow: hidden;
     }
     .code-tabs {
       display: flex;
-      background: rgba(255, 255, 255, 0.03);
+      align-items: center;
+      background: rgba(0, 0, 0, 0.25);
       border-bottom: 1px solid var(--border-subtle);
       padding: 0 12px;
     }
     .code-tab {
-      background: transparent;
+      background: none;
       border: none;
-      color: var(--text-muted);
-      padding: 12px 16px;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
       border-bottom: 2px solid transparent;
+      color: var(--text-muted);
+      font-size: 0.825rem;
+      font-weight: 500;
+      padding: 10px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .code-tab:hover {
+      color: var(--text-main);
     }
     .code-tab.active {
       color: var(--primary);
       border-bottom-color: var(--primary);
     }
-    pre {
-      margin: 0;
-      padding: 20px;
-      overflow-x: auto;
-      font-size: 13px;
-      color: #f1f5f9;
+    .code-body {
+      position: relative;
+      padding: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
       line-height: 1.6;
+      background: #060910;
+      overflow-x: auto;
+    }
+    .btn-copy {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-copy:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+    }
+    .btn-copy.copied {
+      background: #10b981;
+      color: #fff;
+      border-color: #10b981;
     }
 
-    /* Footer */
+    /* Comparison Table */
+    .table-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.875rem;
+    }
+    th, td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    th {
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.2);
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .feature-highlight {
+      color: #10b981;
+      font-weight: 600;
+    }
+    .feature-dim {
+      color: var(--text-faint);
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      transition: border-color 0.15s ease;
+    }
+    .feature-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+    .feature-icon {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Demos Hub */
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .demo-link-card {
+      display: block;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      transition: all 0.15s ease;
+    }
+    .demo-link-card:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .demo-link-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .demo-link-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Minimal Footer */
     footer {
       border-top: 1px solid var(--border-subtle);
-      padding: 40px 24px;
-      text-align: center;
+      padding: 48px 24px;
+      background: var(--bg-surface);
+    }
+    .footer-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      font-size: 0.9rem;
     }
     .footer-links {
       display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 16px;
+      gap: 20px;
       flex-wrap: wrap;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Sticky Minimal Header -->
   <header>
     <div class="header-container">
-      <a href="./" class="brand">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#38bdf8"><path d="M8 5.14v14l11-7-11-7z"/></svg>
-        Sopplayer
-        <span class="version-tag">v2.0.0</span>
-      </a>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="./" class="brand">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>sopplayer</span>
+        </a>
+        <span class="badge-version">v2.0.0</span>
+      </div>
       <nav>
-        <a href="#features">Features</a>
-        <a href="#installation">Install</a>
+        <a href="#quickstart">Quickstart</a>
         <a href="demo/">Playground</a>
-        <a href="players/">Players Gallery</a>
-        <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener">GitHub</a>
+        <a href="players/">Themes</a>
+        <a href="demo/accessibility/">Accessibility</a>
+        <a href="docs/">Docs</a>
+        <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      Sopplayer v2.0 Released &bull; Zero Runtime Dependencies
-    </div>
-    <h1>The modern, accessible HTML5 video player.</h1>
-    <p>A lightweight, customizable, and framework-agnostic video player built with clean ES modules, fluid glassmorphic styling, and 100% backwards compatibility for existing CDN consumers.</p>
+  <main>
+    <section class="hero">
+      <div class="pill-announcement">
+        <span>v2.0.0 Launched</span>
+        <span>·</span>
+        Complete rewrite with zero dependencies
+      </div>
+      <h1>The Modern, Accessible<br>HTML5 Video Player</h1>
+      <p>
+        Engineered for speed, accessibility (WCAG 2.1 AA), and effortless customization.
+        Under 40 KB minified with zero runtime dependencies.
+      </p>
 
-    <div class="hero-actions">
-      <a href="demo/" class="btn btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.14v14l11-7-11-7z"/></svg>
-        Interactive Demo
-      </a>
-      <a href="https://github.com/SH20RAJ/Sopplayer" class="btn btn-secondary" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-        View on GitHub
-      </a>
-      <a href="players/" class="btn btn-secondary">
-        Browse Themes
-      </a>
-    </div>
-  </section>
+      <div class="hero-actions">
+        <a href="#quickstart" class="btn-primary">
+          <span>Get Started</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+        <a href="demo/" class="btn-secondary">
+          <span>Interactive Playground</span>
+        </a>
+        <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          <span>View Source on GitHub</span>
+        </a>
+      </div>
 
-  <!-- Player Showcase -->
-  <section class="player-showcase">
-    <div class="player-frame">
-      <video id="hero-player" poster="sample.png" preload="metadata">
-        <source src="sample.mp4" type="video/mp4" />
-        <track kind="subtitles" label="English" srclang="en" src="demo/captions/subtitles-en.vtt" default>
-        <track kind="subtitles" label="Español" srclang="es" src="demo/captions/subtitles-es.vtt">
-        <p>Your browser does not support HTML5 video.</p>
-      </video>
-    </div>
-
-    <!-- Live Theme Switcher for Demo -->
-    <div class="theme-bar">
-      <span style="font-size: 13px; color: var(--text-muted); margin-right: 8px;">Try Themes:</span>
-      <button class="theme-chip active" data-theme="default">Default</button>
-      <button class="theme-chip" data-theme="flamingo">Flamingo</button>
-      <button class="theme-chip" data-theme="forest">Forest</button>
-      <button class="theme-chip" data-theme="city">City</button>
-      <button class="theme-chip" data-theme="sea">Sea</button>
-      <button class="theme-chip" data-theme="fantasy">Fantasy</button>
-      <button class="theme-chip" data-theme="minimal">Minimal</button>
-    </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features-section" id="features">
-    <div class="section-title">
-      <h2>Engineered for Modern Web Developers</h2>
-      <p>Everything you need for an accessible, robust media experience in under 40 KB.</p>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      <!-- Metric Strip -->
+      <div class="metric-strip">
+        <div class="metric-item">
+          <div class="metric-value">&lt; 40 KB</div>
+          <div class="metric-label">Bundle Size</div>
         </div>
-        <h3>Zero Runtime Dependencies</h3>
-        <p>Pure, framework-agnostic JavaScript. No bulky third-party libraries required. Weighs under 40 KB minified &amp; gzipped.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+        <div class="metric-item">
+          <div class="metric-value">0</div>
+          <div class="metric-label">Dependencies</div>
         </div>
-        <h3>WCAG 2.1 AA Accessibility</h3>
-        <p>Built-in keyboard navigation, visible focus indicators, ARIA slider semantics, screen reader live announcements, and reduced motion support.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.17 19.55 10.53 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+        <div class="metric-item">
+          <div class="metric-value">WCAG AA</div>
+          <div class="metric-label">Accessibility</div>
         </div>
-        <h3>CSS Custom Properties Theming</h3>
-        <p>Fully customizable design system. Ships with 7 polished skins (Default, Flamingo, Forest, City, Sea, Fantasy, Minimal) or define your own.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
+        <div class="metric-item">
+          <div class="metric-value">7 Themes</div>
+          <div class="metric-label">Out of the Box</div>
         </div>
-        <h3>Complete Keyboard Shortcuts</h3>
-        <p>Operate playback, seeking, volume, subtitles, and fullscreen effortlessly via Space, K, arrows, J/L, M, F, P, C, and numeric keys.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 11h-8v6h8v-6zm4 8V4.98C23 3.88 22.1 3 21 3H3c-1.1 0-2 .88-2 1.98V19c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2zm-2 .02H3V4.97h18v14.05z"/></svg>
+        <div class="metric-item">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">v1 Compatible</div>
         </div>
-        <h3>Picture-in-Picture &amp; Fullscreen</h3>
-        <p>Cross-browser fullscreen and floating Picture-in-Picture API abstraction with smooth state transitions.</p>
       </div>
+    </section>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    <!-- Interactive Player & Theme Studio -->
+    <section class="showcase-container">
+      <div class="player-frame">
+        <div class="player-header">
+          <div class="window-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div style="font-size: 0.75rem; color: var(--text-faint); font-family: var(--font-mono);">
+            sample.mp4 — 1080p
+          </div>
         </div>
-        <h3>100% Backwards Compatible</h3>
-        <p>Drop-in replacement for existing Video.js and v1 integrations. Preserves historical CDN URLs, data-setup attributes, and public APIs.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Installation Section -->
-  <section class="install-section" id="installation">
-    <div class="section-title">
-      <h2>Quickstart Installation</h2>
-      <p>Choose your preferred integration method.</p>
-    </div>
+        <!-- Video Player Target -->
+        <video id="hero-player" poster="sample.png" preload="metadata" playsinline width="100%">
+          <source src="sample.mp4" type="video/mp4">
+          <track kind="subtitles" label="English" srclang="en" src="demo/captions/subtitles-en.vtt" default>
+          <track kind="subtitles" label="Español" srclang="es" src="demo/captions/subtitles-es.vtt">
+          Your browser does not support the HTML5 video element.
+        </video>
 
-    <div class="code-box">
-      <div class="code-tabs">
-        <button class="code-tab active" data-tab="cdn">Versioned CDN (Recommended)</button>
-        <button class="code-tab" data-tab="npm">NPM / Yarn</button>
-        <button class="code-tab" data-tab="react">React / Next.js</button>
+        <!-- Theme Studio Bar -->
+        <div class="theme-studio">
+          <span class="theme-studio-title">Theme:</span>
+          <div class="theme-pills">
+            <button class="theme-btn active" data-theme="default">Obsidian</button>
+            <button class="theme-btn" data-theme="flamingo">Flamingo</button>
+            <button class="theme-btn" data-theme="forest">Forest</button>
+            <button class="theme-btn" data-theme="city">City</button>
+            <button class="theme-btn" data-theme="sea">Sea</button>
+            <button class="theme-btn" data-theme="fantasy">Fantasy</button>
+            <button class="theme-btn" data-theme="minimal">Minimal</button>
+          </div>
+          <button class="btn-shortcuts-hint" id="open-shortcuts-btn" title="View Keyboard Shortcuts">
+            ⌨️ Shortcuts <kbd style="font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.8;">(?)</kbd>
+          </button>
+        </div>
       </div>
-      <div id="code-content">
-        <pre><code id="code-block">&lt;!-- 1. Include Versioned Sopplayer Assets (Production Stable) --&gt;
+    </section>
+
+    <!-- Quickstart Installation -->
+    <section id="quickstart" class="section-container">
+      <div class="section-heading">
+        <h2>Quickstart</h2>
+        <p>Integrate Sopplayer in seconds via versioned CDN, NPM, or declarative HTML.</p>
+      </div>
+
+      <div class="code-card">
+        <div class="code-tabs">
+          <button class="code-tab active" data-target="tab-cdn">CDN (Production)</button>
+          <button class="code-tab" data-target="tab-npm">NPM / Bundler</button>
+          <button class="code-tab" data-target="tab-react">React / Next.js</button>
+          <button class="code-tab" data-target="tab-declarative">Declarative HTML</button>
+        </div>
+
+        <div class="code-body" id="tab-cdn">
+          <button class="btn-copy" data-copy-target="code-cdn">Copy</button>
+          <pre><code id="code-cdn">&lt;!-- 1. Include Sopplayer v2.0.0 Stylesheet --&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
 
-&lt;!-- 2. Add Video Element --&gt;
-&lt;video id="player" poster="poster.jpg" preload="metadata"&gt;
+&lt;!-- 2. Standard HTML5 Video Element --&gt;
+&lt;video id="player" poster="poster.jpg" preload="metadata" width="720"&gt;
   &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track kind="subtitles" label="English" srclang="en" src="subtitles.vtt" default&gt;
 &lt;/video&gt;
 
-&lt;!-- 3. Initialize --&gt;
+&lt;!-- 3. Include Sopplayer v2.0.0 Script --&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
   const player = new Sopplayer('#player', {
-    theme: 'default'
+    theme: 'default', // 'flamingo' | 'forest' | 'city' | 'sea' | 'fantasy' | 'minimal'
+    autoplay: false
   });
 &lt;/script&gt;</code></pre>
-      </div>
-    </div>
-  </section>
+        </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-links">
-      <a href="demo/">Playground</a>
-      <a href="players/">Players Gallery</a>
-      <a href="flamingo/">Flamingo</a>
-      <a href="rainplayer/">Rainplayer</a>
-      <a href="afterglow/">Afterglow</a>
-      <a href="home.html">Legacy Demo</a>
-      <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://sh20raj.github.io/" target="_blank" rel="noopener">SH20RAJ</a>
-    </div>
-    <p>&copy; 2020&ndash;2026 Sopplayer. Released under the MIT License.</p>
-  </footer>
+        <div class="code-body" id="tab-npm" style="display: none;">
+          <button class="btn-copy" data-copy-target="code-npm">Copy</button>
+          <pre><code id="code-npm"># Install via npm, pnpm, or yarn
+npm install sopplayer
 
-  <script src="dist/sopplayer.min.js"></script>
-  <script>
-    const heroPlayer = new Sopplayer('#hero-player', {
-      theme: 'default'
-    });
-
-    // Theme chips
-    const chips = document.querySelectorAll('.theme-chip');
-    chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        heroPlayer.setTheme(chip.dataset.theme);
-      });
-    });
-
-    // Code tabs
-    const tabs = document.querySelectorAll('.code-tab');
-    const codeBlock = document.getElementById('code-block');
-    const snippets = {
-      cdn: `&lt;!-- 1. Include Versioned Sopplayer Assets (Production Stable) --&gt;
-&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- 2. Add Video Element --&gt;
-&lt;video id="player" poster="poster.jpg" preload="metadata"&gt;
-  &lt;source src="video.mp4" type="video/mp4"&gt;
-&lt;/video&gt;
-
-&lt;!-- 3. Initialize --&gt;
-&lt;script&gt;
-  const player = new Sopplayer('#player', {
-    theme: 'default'
-  });
-&lt;/script&gt;`,
-      npm: `npm install sopplayer
-
-// In your application:
+// In your application module:
 import { Sopplayer } from 'sopplayer';
 import 'sopplayer/css';
 
 const player = new Sopplayer('#video-element', {
-  theme: 'flamingo'
-});`,
-      react: `import { useEffect, useRef } from 'react';
+  theme: 'flamingo',
+  keyboard: true,
+  seekStep: 5
+});</code></pre>
+        </div>
+
+        <div class="code-body" id="tab-react" style="display: none;">
+          <button class="btn-copy" data-copy-target="code-react">Copy</button>
+          <pre><code id="code-react">import { useEffect, useRef } from 'react';
 import { Sopplayer } from 'sopplayer';
 import 'sopplayer/css';
 
-export function MyVideo() {
+export function VideoPlayer({ src, poster }) {
   const videoRef = useRef(null);
+  const playerRef = useRef(null);
 
   useEffect(() => {
-    const player = new Sopplayer(videoRef.current);
-    return () => player.destroy();
-  }, []);
-
-  return &lt;video ref={videoRef} src="/video.mp4" poster="/poster.jpg" /&gt;;
-}`
+    if (videoRef.current) {
+      playerRef.current = new Sopplayer(videoRef.current, {
+        theme: 'default',
+        aspectRatio: '16:9'
+      });
+    }
+    return () => {
+      playerRef.current?.destroy();
     };
+  }, [src]);
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        codeBlock.innerHTML = snippets[tab.dataset.tab];
+  return (
+    &lt;video ref={videoRef} poster={poster} preload="metadata"&gt;
+      &lt;source src={src} type="video/mp4" /&gt;
+    &lt;/video&gt;
+  );
+}</code></pre>
+        </div>
+
+        <div class="code-body" id="tab-declarative" style="display: none;">
+          <button class="btn-copy" data-copy-target="code-declarative">Copy</button>
+          <pre><code id="code-declarative">&lt;!-- Drop-in zero-JS initialization with data-setup --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
+
+&lt;video class="sopplayer" data-setup='{"theme":"forest","autoplay":false}' poster="poster.jpg"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmark Matrix -->
+    <section class="section-container">
+      <div class="section-heading">
+        <h2>Comparison Matrix</h2>
+        <p>How Sopplayer v2 compares with popular open-source video player alternatives.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Sopplayer v2.0</th>
+              <th>Video.js 8.x</th>
+              <th>Plyr 3.7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Minified Bundle Size</strong></td>
+              <td class="feature-highlight">&lt; 40 KB</td>
+              <td class="feature-dim">&gt; 450 KB</td>
+              <td class="feature-dim">~ 120 KB</td>
+            </tr>
+            <tr>
+              <td><strong>Runtime Dependencies</strong></td>
+              <td class="feature-highlight">0 (Pure JS)</td>
+              <td class="feature-dim">14+</td>
+              <td class="feature-dim">2</td>
+            </tr>
+            <tr>
+              <td><strong>Built-in Themes</strong></td>
+              <td class="feature-highlight">7 CSS Themes</td>
+              <td class="feature-dim">Requires plugins</td>
+              <td class="feature-dim">1 Theme</td>
+            </tr>
+            <tr>
+              <td><strong>WCAG 2.1 AA Audited</strong></td>
+              <td class="feature-highlight">✓ First-Class (Live region)</td>
+              <td class="feature-highlight">✓ Yes</td>
+              <td class="feature-dim">Partial</td>
+            </tr>
+            <tr>
+              <td><strong>Picture-in-Picture &amp; Fullscreen</strong></td>
+              <td class="feature-highlight">✓ Vendor Prefix Free</td>
+              <td class="feature-highlight">✓ Yes</td>
+              <td class="feature-highlight">✓ Yes</td>
+            </tr>
+            <tr>
+              <td><strong>Legacy Video.js API Proxy</strong></td>
+              <td class="feature-highlight">✓ Built-in Adapter</td>
+              <td class="feature-dim">N/A</td>
+              <td class="feature-dim">No</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="section-container">
+      <div class="section-heading">
+        <h2>Engineered for Excellence</h2>
+        <p>Built for modern web applications where performance, user experience, and accessibility matter.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🪶</span>
+          <h3>Zero Dependencies</h3>
+          <p>Handcrafted without heavy frameworks or bloated abstractions. Under 40 KB minified, loading in single-digit milliseconds.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">♿</span>
+          <h3>WCAG 2.1 AA Accessible</h3>
+          <p>Full keyboard focus trapping, visible focus rings, ARIA slider semantics, and live region screen reader announcements.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">⌨️</span>
+          <h3>Rich Keyboard Shortcuts</h3>
+          <p>Space/K to toggle, Left/Right/J/L to seek, Up/Down/M for volume, F for fullscreen, and P for Picture-in-Picture.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🎨</span>
+          <h3>CSS Custom Properties</h3>
+          <p>Change your player's entire visual identity with 5 CSS variables. Switch between 7 included themes or write your own.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🔒</span>
+          <h3>Security Hardened</h3>
+          <p>Audited against DOM XSS vectors, sanitizing URLs to block <code>javascript:</code> protocol injection and untrusted HTML.</p>
+        </div>
+
+        <div class="feature-card">
+          <span class="feature-icon">🔄</span>
+          <h3>Backwards Compatible</h3>
+          <p>Old CDN URLs, legacy skins, and Video.js v1 APIs continue working unchanged with zero migration friction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Demos Gallery -->
+    <section class="section-container">
+      <div class="section-heading">
+        <h2>Interactive Showcases &amp; Demos</h2>
+        <p>Explore specialized playgrounds, theme galleries, and integration guides.</p>
+      </div>
+
+      <div class="demos-grid">
+        <a href="demo/" class="demo-link-card">
+          <h4>
+            <span>Interactive Playground</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Live telemetry inspector, playback state viewer, and runtime config generator.</p>
+        </a>
+
+        <a href="players/" class="demo-link-card">
+          <h4>
+            <span>Theme Showcase Gallery</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Compare all 7 built-in themes side-by-side with color swatch previews.</p>
+        </a>
+
+        <a href="demo/accessibility/" class="demo-link-card">
+          <h4>
+            <span>Accessibility Lab</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Screen reader testing, live polite announcements, and high-contrast validation.</p>
+        </a>
+
+        <a href="demo/captions/" class="demo-link-card">
+          <h4>
+            <span>Subtitles &amp; Captions</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Multi-track WebVTT subtitle track rendering and dynamic selection.</p>
+        </a>
+
+        <a href="demo/fullscreen/" class="demo-link-card">
+          <h4>
+            <span>Fullscreen &amp; PiP</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Cross-browser Fullscreen API and Picture-in-Picture window management.</p>
+        </a>
+
+        <a href="demo/integrations/" class="demo-link-card">
+          <h4>
+            <span>React &amp; Vue Guides</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </h4>
+          <p>Drop-in components and lifecycle integration patterns for modern frameworks.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Clean Footer -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <p><strong>Sopplayer</strong> · Open-source HTML5 video player.</p>
+        <p style="margin-top: 4px; font-size: 0.8rem; color: var(--text-faint);">
+          Created &amp; maintained by <a href="https://sh20raj.github.io/" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: underline;">Shaswat Raj</a> (@SH20RAJ).
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener">GitHub</a>
+        <a href="docs/">Documentation</a>
+        <a href="CHANGELOG.md">Changelog</a>
+        <a href="SECURITY.md">Security</a>
+        <a href="LICENSE">MIT License</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sopplayer Script -->
+  <script src="dist/sopplayer.min.js"></script>
+  <script>
+    // Initialize hero showcase player
+    let heroPlayer;
+    document.addEventListener('DOMContentLoaded', () => {
+      heroPlayer = new Sopplayer('#hero-player', {
+        theme: 'default',
+        aspectRatio: '16:9',
+        keyboard: true
+      });
+
+      // Live Theme Studio Switcher
+      const themeButtons = document.querySelectorAll('.theme-btn');
+      themeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          themeButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const themeName = btn.getAttribute('data-theme');
+          if (heroPlayer) {
+            heroPlayer.setTheme(themeName);
+          }
+        });
+      });
+
+      // Keyboard shortcuts modal trigger
+      const shortcutsBtn = document.getElementById('open-shortcuts-btn');
+      if (shortcutsBtn) {
+        shortcutsBtn.addEventListener('click', () => {
+          if (heroPlayer && heroPlayer.shortcutsModal) {
+            heroPlayer.shortcutsModal.toggle();
+          }
+        });
+      }
+
+      // Quickstart code tabs
+      const tabs = document.querySelectorAll('.code-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const targetId = tab.getAttribute('data-target');
+          document.querySelectorAll('.code-body').forEach(body => {
+            body.style.display = body.id === targetId ? 'block' : 'none';
+          });
+        });
+      });
+
+      // One-click copy buttons
+      const copyButtons = document.querySelectorAll('.btn-copy');
+      copyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-copy-target');
+          const codeEl = document.getElementById(targetId);
+          if (!codeEl) return;
+
+          navigator.clipboard.writeText(codeEl.innerText).then(() => {
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+              btn.textContent = 'Copy';
+              btn.classList.remove('copied');
+            }, 2000);
+          });
+        });
       });
     });
   </script>
