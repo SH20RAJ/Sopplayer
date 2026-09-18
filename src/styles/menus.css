@@ -1,0 +1,263 @@
+/**
+ * Sopplayer v2.0 - Menus, Modals & Overlays Stylesheet
+ */
+
+/* Settings Container & Dropdown */
+.sp-settings-container {
+  position: relative;
+}
+
+.sp-settings-menu {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  right: 0;
+  width: 220px;
+  background: var(--sp-color-bg);
+  backdrop-filter: var(--sp-glass-backdrop);
+  -webkit-backdrop-filter: var(--sp-glass-backdrop);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  box-shadow: var(--sp-shadow-lg);
+  padding: var(--sp-space-1);
+  display: flex;
+  flex-direction: column;
+  z-index: var(--sp-z-menu);
+  animation: sp-menu-fade-in var(--sp-transition-fast);
+}
+
+@keyframes sp-menu-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sp-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--sp-space-2) var(--sp-space-3);
+  background: transparent;
+  border: none;
+  border-radius: var(--sp-radius-sm);
+  color: var(--sp-color-text);
+  font-size: var(--sp-font-size-xs);
+  cursor: pointer;
+  text-align: left;
+  transition: background-color var(--sp-transition-fast);
+}
+
+.sp-menu-item:hover {
+  background-color: var(--sp-color-surface-hover);
+}
+
+.sp-menu-item:focus-visible {
+  outline: var(--sp-focus-ring);
+}
+
+.sp-menu-label {
+  flex: 1;
+}
+
+.sp-menu-value {
+  color: var(--sp-color-text-muted);
+  font-size: 11px;
+}
+
+.sp-menu-header {
+  border-bottom: 1px solid var(--sp-color-border);
+  padding-bottom: var(--sp-space-2);
+  margin-bottom: var(--sp-space-1);
+  font-weight: 600;
+}
+
+.sp-menu-back {
+  font-size: 16px;
+  line-height: 1;
+  margin-right: var(--sp-space-2);
+}
+
+.sp-radio-item.sp-selected {
+  color: var(--sp-color-primary);
+  font-weight: 500;
+}
+
+/* Switch */
+.sp-menu-switch {
+  position: relative;
+  width: 32px;
+  height: 18px;
+  background-color: var(--sp-color-surface);
+  border-radius: var(--sp-radius-full);
+  border: 1px solid var(--sp-color-border);
+  transition: background-color var(--sp-transition-fast);
+}
+
+.sp-menu-switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: var(--sp-radius-full);
+  transition: transform var(--sp-transition-fast);
+}
+
+.sp-menu-switch.sp-switch-on {
+  background-color: var(--sp-color-primary);
+  border-color: var(--sp-color-primary);
+}
+
+.sp-menu-switch.sp-switch-on::after {
+  transform: translateX(14px);
+}
+
+/* Loading Spinner */
+.sp-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--sp-z-spinner);
+  color: var(--sp-color-primary);
+  pointer-events: none;
+}
+
+.sp-spinner-svg {
+  animation: sp-spin 1s linear infinite;
+}
+
+@keyframes sp-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error Display */
+.sp-error-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: var(--sp-glass-backdrop);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-space-4);
+  padding: var(--sp-space-6);
+  text-align: center;
+  z-index: var(--sp-z-modal);
+}
+
+.sp-error-message {
+  color: var(--sp-color-danger);
+  font-size: var(--sp-font-size-md);
+  max-width: 400px;
+}
+
+.sp-error-retry {
+  background: var(--sp-color-surface);
+  border: 1px solid var(--sp-color-border);
+  color: var(--sp-color-text);
+  padding: var(--sp-space-2) var(--sp-space-4);
+  border-radius: var(--sp-radius-sm);
+  cursor: pointer;
+  font-size: var(--sp-font-size-xs);
+  transition: background-color var(--sp-transition-fast);
+}
+
+.sp-error-retry:hover {
+  background: var(--sp-color-surface-hover);
+}
+
+/* Shortcuts Modal */
+.sp-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: var(--sp-glass-backdrop);
+  -webkit-backdrop-filter: var(--sp-glass-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--sp-z-modal);
+  animation: sp-modal-fade 0.2s ease-out;
+}
+
+@keyframes sp-modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sp-modal-content {
+  background: var(--sp-color-bg);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-md);
+  padding: var(--sp-space-5);
+  width: 90%;
+  max-width: 420px;
+  box-shadow: var(--sp-shadow-lg);
+}
+
+.sp-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-space-4);
+}
+
+.sp-modal-title {
+  margin: 0;
+  font-size: var(--sp-font-size-md);
+  font-weight: 600;
+}
+
+.sp-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--sp-color-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--sp-radius-xs);
+}
+
+.sp-modal-close:hover {
+  color: var(--sp-color-text);
+}
+
+.sp-shortcuts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-space-2);
+}
+
+.sp-shortcut-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--sp-font-size-xs);
+  color: var(--sp-color-text-muted);
+}
+
+.sp-shortcut-row kbd {
+  background-color: var(--sp-color-surface);
+  border: 1px solid var(--sp-color-border);
+  border-radius: var(--sp-radius-xs);
+  padding: 2px 6px;
+  font-family: monospace;
+  font-size: 11px;
+  color: var(--sp-color-text);
+}

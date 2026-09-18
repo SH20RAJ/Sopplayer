@@ -1,0 +1,16 @@
+/**
+ * Sopplayer v2.0 - Core Stylesheet Bundle
+ */
+
+@import './tokens.css';
+@import './player.css';
+@import './controls.css';
+@import './menus.css';
+@import './v1-compat.css';
+@import '../../skins/default/theme.css';
+@import '../../skins/flamingo/theme.css';
+@import '../../skins/forest/theme.css';
+@import '../../skins/city/theme.css';
+@import '../../skins/sea/theme.css';
+@import '../../skins/fantasy/theme.css';
+@import '../../skins/minimal/theme.css';

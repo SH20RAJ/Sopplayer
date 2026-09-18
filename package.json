@@ -1,0 +1,62 @@
+{
+  "name": "sopplayer",
+  "version": "2.0.0",
+  "description": "A modern, accessible, responsive, and lightweight HTML5 video player with zero runtime dependencies",
+  "main": "./dist/sopplayer.js",
+  "module": "./dist/sopplayer.esm.js",
+  "unpkg": "./dist/sopplayer.min.js",
+  "jsdelivr": "./dist/sopplayer.min.js",
+  "style": "./dist/sopplayer.min.css",
+  "types": "./dist/sopplayer.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/sopplayer.d.ts",
+      "import": "./dist/sopplayer.esm.js",
+      "require": "./dist/sopplayer.js"
+    },
+    "./css": "./dist/sopplayer.css",
+    "./min.css": "./dist/sopplayer.min.css",
+    "./skins/*": "./skins/*"
+  },
+  "files": [
+    "dist",
+    "skins",
+    "src",
+    "svg",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node --test tests/**/*.test.js",
+    "dev": "node scripts/dev-server.js",
+    "lint": "node scripts/lint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SH20RAJ/Sopplayer.git"
+  },
+  "keywords": [
+    "video-player",
+    "html5-video",
+    "media-player",
+    "accessible-video-player",
+    "sopplayer",
+    "videojs",
+    "custom-player",
+    "responsive-video"
+  ],
+  "author": "SH20RAJ (https://github.com/SH20RAJ)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SH20RAJ/Sopplayer/issues"
+  },
+  "homepage": "https://sh20raj.github.io/Sopplayer/",
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "esbuild": "^0.25.0"
+  }
+}
