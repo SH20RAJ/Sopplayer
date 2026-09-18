@@ -1,0 +1,11 @@
+/**
+ * Sopplayer Skin - Default (Obsidian Glass)
+ * Flagship dark mode with subtle cyan / sky blue glow
+ */
+
+.sp-player.sp-theme-default {
+  --sp-color-primary: #38bdf8;
+  --sp-color-primary-hover: #0ea5e9;
+  --sp-color-primary-glow: rgba(56, 189, 248, 0.4);
+  --sp-focus-ring: 2px solid #38bdf8;
+}

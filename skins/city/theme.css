@@ -1,0 +1,12 @@
+/**
+ * Sopplayer Skin - City
+ * Modern urban night theme with warm amber / crimson accents
+ */
+
+.sp-player.sp-theme-city {
+  --sp-color-primary: #f59e0b;
+  --sp-color-primary-hover: #d97706;
+  --sp-color-primary-glow: rgba(245, 158, 11, 0.45);
+  --sp-color-surface-hover: rgba(245, 158, 11, 0.15);
+  --sp-focus-ring: 2px solid #f59e0b;
+}

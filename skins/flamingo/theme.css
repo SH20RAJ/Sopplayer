@@ -1,0 +1,12 @@
+/**
+ * Sopplayer Skin - Flamingo
+ * Vibrant rose/coral accent with modern glassmorphic surfaces
+ */
+
+.sp-player.sp-theme-flamingo {
+  --sp-color-primary: #f43f5e;
+  --sp-color-primary-hover: #e11d48;
+  --sp-color-primary-glow: rgba(244, 63, 94, 0.45);
+  --sp-color-surface-hover: rgba(244, 63, 94, 0.15);
+  --sp-focus-ring: 2px solid #f43f5e;
+}
