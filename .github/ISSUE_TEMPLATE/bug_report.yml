@@ -1,0 +1,43 @@
+name: 🐛 Bug Report
+description: File a bug report to help us improve Sopplayer
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please verify you are using the latest version of Sopplayer before reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Sopplayer Version
+      placeholder: e.g. 2.0.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser & OS
+      placeholder: e.g. Chrome 122 on macOS 14 / Safari on iOS 17
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps or a minimal CodePen / JSFiddle reproduction link.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
