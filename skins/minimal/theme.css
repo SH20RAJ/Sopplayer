@@ -1,0 +1,14 @@
+/**
+ * Sopplayer Skin - Minimal
+ * Restrained monochrome aesthetic for clean blogs and technical documentation
+ */
+
+.sp-player.sp-theme-minimal {
+  --sp-color-bg: rgba(0, 0, 0, 0.9);
+  --sp-color-surface: rgba(255, 255, 255, 0.1);
+  --sp-color-surface-hover: rgba(255, 255, 255, 0.2);
+  --sp-color-primary: #ffffff;
+  --sp-color-primary-hover: #e2e8f0;
+  --sp-color-primary-glow: rgba(255, 255, 255, 0.3);
+  --sp-focus-ring: 2px solid #ffffff;
+}

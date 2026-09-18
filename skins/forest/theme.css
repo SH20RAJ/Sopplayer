@@ -1,0 +1,12 @@
+/**
+ * Sopplayer Skin - Forest
+ * Emerald and sage nature theme
+ */
+
+.sp-player.sp-theme-forest {
+  --sp-color-primary: #10b981;
+  --sp-color-primary-hover: #059669;
+  --sp-color-primary-glow: rgba(16, 185, 129, 0.45);
+  --sp-color-surface-hover: rgba(16, 185, 129, 0.15);
+  --sp-focus-ring: 2px solid #10b981;
+}

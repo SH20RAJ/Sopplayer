@@ -1,0 +1,12 @@
+/**
+ * Sopplayer Skin - Fantasy
+ * Electric violet and neon cyberpunk aesthetic
+ */
+
+.sp-player.sp-theme-fantasy {
+  --sp-color-primary: #a855f7;
+  --sp-color-primary-hover: #9333ea;
+  --sp-color-primary-glow: rgba(168, 85, 247, 0.45);
+  --sp-color-surface-hover: rgba(168, 85, 247, 0.15);
+  --sp-focus-ring: 2px solid #a855f7;
+}
