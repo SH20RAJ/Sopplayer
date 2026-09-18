@@ -157,7 +157,11 @@ players.forEach(function (player) {
 
     var title = showTitle(skin, video.dataset.title);
     if (title) {
-        player.insertAdjacentHTML('beforeend', title);
+        if (typeof title === 'string') {
+            player.insertAdjacentHTML('beforeend', title);
+        } else {
+            player.appendChild(title);
+        }
     }
 
     var html = buildControls(skin);
@@ -315,7 +319,10 @@ function attachSkin(skin) {
 
 function showTitle(skin, title) {
     if (typeof title != 'undefined' && title != '') {
-        return '<div class="' + skin + '__title">' + title + '</div>';
+        var el = document.createElement('div');
+        el.className = skin + '__title';
+        el.textContent = title;
+        return el;
     } else {
         return false;
     }

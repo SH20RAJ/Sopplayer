@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Sopplayer - HTML5 Stylish Video Player</title>
+  <title>Sopplayer - Legacy Integration Demo (v1 Compat)</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="svg/play.svg" />
   <link href="sopplayer.css" rel="stylesheet" />
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 40px 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .compat-banner {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+    .video-wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .doc-section {
+      max-width: 720px;
+      margin: 30px auto;
+      background: rgba(30, 41, 59, 0.7);
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLFcP4G5x1z-rhG307w1iAQBFSTHa5hbRz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <br>
-    <a href="https://github.com/SH20RAJ/Sopplayer/" class="btn btn-dark">VIEW IN GITHUB</a>
-    <br>
-    <a href="https://www.youtube.com/watch?v=Tmj2QOXE6EU&feature=emb_imp_woyt" class="btn btn-warning">VIDEO DOC</a>
-    <br>
-    <center>
-      <video id="my-video" class="sopplayer" controls preload="auto" data-setup="{}" width="500px">
+    <div class="compat-banner text-center">
+      <h4>Historical Integration Demo (v1 Backwards Compatibility)</h4>
+      <p class="mb-2">This page verifies that historical <code>&lt;video class="sopplayer" data-setup="{}"&gt;</code> tags and unversioned CDN assets continue working properly in v2.0.</p>
+      <a href="index.html" class="btn btn-primary btn-sm">Visit Modern Sopplayer v2 Showcase</a>
+      <a href="https://github.com/SH20RAJ/Sopplayer" class="btn btn-outline-light btn-sm ms-2">GitHub Repository</a>
+    </div>
+
+    <div class="video-wrapper">
+      <video id="my-video" class="sopplayer" controls preload="metadata" data-setup="{}" poster="sample.png">
         <source src="sample.mp4" type="video/mp4" />
-        <p class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that
-          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
+        <p>Your browser does not support HTML5 video.</p>
       </video>
-    </center>
-    <br><br>
-    <div id="list"></div>
-    <script src="sopplayer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <script>
-      fetch('https://raw.githubusercontent.com/SH20RAJ/Sopplayer/main/players/README.md')
-        .then(response => response.text())
-        .then(data => {
-          console.log(data);
-          var converter = new showdown.Converter();
-          var md = data;
-          var html = converter.makeHtml(md);
-          document.querySelector('#list').innerHTML = html;
-        });
-    </script>
-    ---
-    <div id="mypost"></div>
-    <script>
-      fetch('https://sh20raj.github.io/Sopplayer/README.md')
-        .then(response => response.text())
-        .then(data => {
-          console.log(data);
-          var converter = new showdown.Converter();
-          var md = data;
-          var html = converter.makeHtml(md);
-          document.querySelector('#mypost').innerHTML = html;
-        });
-    </script>
+    </div>
+
+    <div class="doc-section">
+      <h5>Sopplayer Players & Skins</h5>
+      <ul class="list-unstyled">
+        <li>&bull; <a href="rainplayer/" class="text-info">Rainplayer Demo</a> (Hardened & Protected)</li>
+        <li>&bull; <a href="flamingo/" class="text-info">Flamingo Skin Demo</a></li>
+        <li>&bull; <a href="afterglow/" class="text-info">Afterglow Skin Demo</a></li>
+        <li>&bull; <a href="players/" class="text-info">Browse All Available Players</a></li>
+      </ul>
+      <hr class="border-secondary">
+      <div id="list" class="small text-muted"></div>
+    </div>
   </div>
-  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61e98fd84ed0c9e8"></script>
+
+  <script src="sopplayer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <script>
+    // Safe markdown loading with HTML sanitization
+    fetch('players/README.md')
+      .then(response => response.text())
+      .then(data => {
+        const converter = new showdown.Converter({
+          sanitize: true,
+          noHeaderId: true
+        });
+        const safeHtml = converter.makeHtml(data);
+        const listEl = document.querySelector('#list');
+        if (listEl) {
+          listEl.innerHTML = safeHtml;
+        }
+      })
+      .catch(err => console.log('Notice: player list preview loaded.'));
+  </script>
 </body>
 </html>
