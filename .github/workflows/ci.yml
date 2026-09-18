@@ -35,3 +35,9 @@ jobs:
 
       - name: Verify Build
         run: npm run build
+
+      - name: Check Bundle Size Budget
+        run: npm run check-size
+
+      - name: Verify Working Tree Clean
+        run: git diff --exit-code
