@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Accessibility &amp; ARIA Showcase</title>
+  <link rel="icon" href="../../svg/play.svg" />
+  <link rel="stylesheet" href="../../dist/sopplayer.min.css">
+  <style>
+    body {
+      background: #0b0f19;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .announcements-box {
+      background: #000;
+      border: 1px solid #38bdf8;
+      border-radius: 6px;
+      padding: 12px;
+      min-height: 80px;
+      font-family: monospace;
+      color: #38bdf8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    kbd {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../">&larr; Back to Playground</a>
+      <h1 style="margin-top: 12px;">Accessibility (a11y) Showcase</h1>
+      <p style="color: #94a3b8;">WCAG 2.1 AA Compliant: Full keyboard navigation, visible focus rings, ARIA live regions, and semantic slider roles.</p>
+    </header>
+
+    <video id="player" poster="../../sample.png" preload="metadata">
+      <source src="../../sample.mp4" type="video/mp4" />
+      <p>Your browser does not support HTML5 video.</p>
+    </video>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Screen Reader Live Announcements</h3>
+        <p style="color: #94a3b8; font-size: 13px;">This box mirrors what Assistive Technology (NVDA, JAWS, VoiceOver) announces via the <code>aria-live="polite"</code> region:</p>
+        <div class="announcements-box" id="sr-mirror">
+          Player ready. Press Tab to navigate controls.
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>WCAG 2.1 AA Checklist</h3>
+        <ul style="font-size: 13px; color: #94a3b8; line-height: 1.8; padding-left: 20px;">
+          <li>&check; <strong>1.4.3 Contrast (Minimum)</strong>: High contrast ratios &gt; 4.5:1 for UI text and 3:1 for control buttons.</li>
+          <li>&check; <strong>2.1.1 Keyboard Accessible</strong>: All controls operable via Tab, Space, Enter, Arrows.</li>
+          <li>&check; <strong>2.4.7 Focus Visible</strong>: High-contrast focus-visible outline ring with 2px offset.</li>
+          <li>&check; <strong>2.3.3 Animation from Interactions</strong>: Honors <code>prefers-reduced-motion</code>.</li>
+          <li>&check; <strong>2.5.5 Target Size</strong>: Interactive targets have minimum 36&times;36px to 44&times;44px bounding area.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 24px;">
+      <h3>Keyboard Shortcut Reference</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Action</th>
+            <th>Behavior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>Space</kbd> or <kbd>K</kbd></td>
+            <td>Play / Pause</td>
+            <td>Toggles video playback</td>
+          </tr>
+          <tr>
+            <td><kbd>&larr;</kbd> / <kbd>&rarr;</kbd></td>
+            <td>Seek &plusmn;5s</td>
+            <td>Hold Shift for &plusmn;10s</td>
+          </tr>
+          <tr>
+            <td><kbd>&uarr;</kbd> / <kbd>&darr;</kbd></td>
+            <td>Volume &plusmn;10%</td>
+            <td>Adjusts volume level</td>
+          </tr>
+          <tr>
+            <td><kbd>M</kbd></td>
+            <td>Mute / Unmute</td>
+            <td>Toggles audio mute state</td>
+          </tr>
+          <tr>
+            <td><kbd>F</kbd></td>
+            <td>Fullscreen</td>
+            <td>Toggles browser fullscreen mode</td>
+          </tr>
+          <tr>
+            <td><kbd>P</kbd></td>
+            <td>Picture-in-Picture</td>
+            <td>Toggles floating PiP window</td>
+          </tr>
+          <tr>
+            <td><kbd>C</kbd></td>
+            <td>Captions</td>
+            <td>Toggles subtitle tracks</td>
+          </tr>
+          <tr>
+            <td><kbd>0</kbd> &ndash; <kbd>9</kbd></td>
+            <td>Seek to percentage</td>
+            <td>Jumps to 0% through 90%</td>
+          </tr>
+          <tr>
+            <td><kbd>?</kbd></td>
+            <td>Help Modal</td>
+            <td>Opens shortcuts cheat sheet modal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player');
+    const mirrorEl = document.getElementById('sr-mirror');
+
+    // Monitor mutations to aria-live region to demonstrate screen reader announcements
+    const observer = new MutationObserver(() => {
+      const text = player.announcer.el.textContent;
+      if (text) {
+        mirrorEl.textContent = `[Auditory Announcement]: "${text}"`;
+      }
+    });
+
+    observer.observe(player.announcer.el, { childList: true, characterData: true, subtree: true });
+  </script>
+</body>
+</html>

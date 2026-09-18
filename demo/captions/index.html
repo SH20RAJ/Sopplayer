@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Multi-Language Captions Demo</title>
+  <link rel="icon" href="../../svg/play.svg" />
+  <link rel="stylesheet" href="../../dist/sopplayer.min.css">
+  <style>
+    body {
+      background: #0b0f19;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    pre {
+      background: #000;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../">&larr; Back to Playground</a>
+      <h1 style="margin-top: 12px;">Multi-Language Subtitles &amp; Captions</h1>
+      <p style="color: #94a3b8;">Supports WebVTT subtitle tracks. Switch between English, Spanish, or Off via the Settings menu or press <kbd>C</kbd>.</p>
+    </header>
+
+    <video id="player" poster="../../sample.png" preload="metadata">
+      <source src="../../sample.mp4" type="video/mp4" />
+      <track kind="subtitles" label="English" srclang="en" src="./subtitles-en.vtt" default>
+      <track kind="subtitles" label="Español" srclang="es" src="./subtitles-es.vtt">
+      <p>Your browser does not support HTML5 video.</p>
+    </video>
+
+    <div class="card">
+      <h3>How Subtitles are Configured</h3>
+      <p style="color: #94a3b8;">Simply add standard HTML5 <code>&lt;track&gt;</code> elements inside your <code>&lt;video&gt;</code> tag:</p>
+      <pre><code>&lt;video id="my-video" src="video.mp4"&gt;
+  &lt;track kind="subtitles" label="English" srclang="en" src="subtitles-en.vtt" default&gt;
+  &lt;track kind="subtitles" label="Español" srclang="es" src="subtitles-es.vtt"&gt;
+&lt;/video&gt;</code></pre>
+    </div>
+  </div>
+
+  <script src="../../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player');
+  </script>
+</body>
+</html>

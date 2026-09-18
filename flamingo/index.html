@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Flamingo Skin Demo</title>
+  <link rel="icon" href="../svg/play.svg" />
+  <link rel="stylesheet" href="../dist/sopplayer.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #f43f5e;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .player-box {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(244, 63, 94, 0.2);
+    }
+    .code-box {
+      margin-top: 30px;
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    pre {
+      background: #000;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+      color: #f8fafc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../players/">&larr; Back to Players Gallery</a>
+      <h1 style="margin-top: 12px; color: #f43f5e;">Sopplayer Flamingo Theme</h1>
+      <p style="color: #94a3b8;">A modern coral-rose theme with accessible controls and smooth glassmorphism.</p>
+    </header>
+
+    <div class="player-box">
+      <video id="player" poster="../sample.png" preload="metadata">
+        <source src="../sample.mp4" type="video/mp4" />
+        <p>Your browser does not support HTML5 video.</p>
+      </video>
+    </div>
+
+    <div class="code-box">
+      <h3>Quick Integration</h3>
+      <pre><code>&lt;!-- Include Sopplayer CSS and JS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Initialize with Flamingo theme --&gt;
+&lt;video id="my-video" src="video.mp4" poster="poster.jpg"&gt;&lt;/video&gt;
+&lt;script&gt;
+  const player = new Sopplayer('#my-video', {
+    theme: 'flamingo'
+  });
+&lt;/script&gt;</code></pre>
+    </div>
+  </div>
+
+  <script src="../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player', {
+      theme: 'flamingo'
+    });
+  </script>
+</body>
+</html>

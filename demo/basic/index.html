@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sopplayer - Basic Setup Demo</title>
+  <link rel="icon" href="../../svg/play.svg" />
+  <link rel="stylesheet" href="../../dist/sopplayer.min.css">
+  <style>
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      background: #000;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-top: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../">&larr; Back to Playground</a>
+      <h1 style="margin-top: 12px;">Minimal Vanilla Setup</h1>
+      <p style="color: #94a3b8;">Zero build step required. Just include the CSS and JS bundles.</p>
+    </header>
+
+    <video id="player" poster="../../sample.png" preload="metadata">
+      <source src="../../sample.mp4" type="video/mp4" />
+      <p>Your browser does not support HTML5 video.</p>
+    </video>
+
+    <pre><code>&lt;!-- Include Sopplayer Assets --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- Video markup --&gt;
+&lt;video id="player" poster="poster.png" preload="metadata"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+
+&lt;!-- Initialization --&gt;
+&lt;script&gt;
+  const player = new Sopplayer('#player');
+&lt;/script&gt;</code></pre>
+  </div>
+
+  <script src="../../dist/sopplayer.min.js"></script>
+  <script>
+    const player = new Sopplayer('#player');
+  </script>
+</body>
+</html>
