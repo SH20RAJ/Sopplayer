@@ -1,76 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sopplayer - Multi-Language Captions Demo</title>
-  <link rel="icon" href="../../svg/play.svg" />
-  <link rel="stylesheet" href="../../dist/sopplayer.min.css">
-  <style>
-    body {
-      background: #0b0f19;
-      color: #f8fafc;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    header {
-      margin-bottom: 24px;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .card {
-      background: rgba(30, 41, 59, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 20px;
-      margin-top: 24px;
-    }
-    pre {
-      background: #000;
-      padding: 12px;
-      border-radius: 6px;
-      overflow-x: auto;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <a href="../">&larr; Back to Playground</a>
-      <h1 style="margin-top: 12px;">Multi-Language Subtitles &amp; Captions</h1>
-      <p style="color: #94a3b8;">Supports WebVTT subtitle tracks. Switch between English, Spanish, or Off via the Settings menu or press <kbd>C</kbd>.</p>
-    </header>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Captions and multilingual subtitles | Sopplayer</title><meta name="description" content="Test native WebVTT subtitle tracks with Sopplayer using English and Spanish sample captions."><meta name="robots" content="index,follow"><link rel="canonical" href="https://sh20raj.github.io/Sopplayer/demo/captions/"><meta property="og:type" content="website"><meta property="og:title" content="Captions and multilingual subtitles | Sopplayer"><meta property="og:description" content="Test native WebVTT subtitle tracks with Sopplayer using English and Spanish sample captions."><meta property="og:url" content="https://sh20raj.github.io/Sopplayer/demo/captions/"><meta property="og:image" content="https://sh20raj.github.io/Sopplayer/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Captions and multilingual subtitles | Sopplayer"><meta name="twitter:description" content="Test native WebVTT subtitle tracks with Sopplayer using English and Spanish sample captions."><meta name="twitter:image" content="https://sh20raj.github.io/Sopplayer/og.png"><link rel="icon" href="../../svg/play.svg" type="image/svg+xml"><link rel="stylesheet" href="../../site.css"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Captions and multilingual subtitles","url":"https://sh20raj.github.io/Sopplayer/demo/captions/"}</script></head><body><header class="site-header"><div class="container site-nav"><a class="site-brand" href="../../"><span class="site-brand-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.3v13.4c0 .9 1 1.4 1.8.9l10-6.7a1.1 1.1 0 0 0 0-1.8l-10-6.7C9 3.9 8 4.4 8 5.3Z"/></svg></span>Sopplayer<span class="site-version">v2.0</span></a><button class="site-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="site-links"><span></span></button><nav class="site-links" id="site-links"><a href="../../">Home</a><a href="../../demo/">Playground</a><a href="../../players/">Themes</a><a href="../../docs/">Docs</a><a href="../../v1/">V1</a><a href="../../demo/accessibility/">Accessibility</a><a class="site-github" href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener noreferrer">GitHub</a></nav></div></header><main class="page-main"><div class="container"><div class="breadcrumbs"><a href="../../">Sopplayer</a><span>/</span><span>Captions and multilingual subtitles</span></div><header class="page-hero"><span class="page-kicker">Sopplayer v2.0</span><h1>Captions and multilingual subtitles</h1><p>Test native WebVTT subtitle tracks with Sopplayer using English and Spanish sample captions.</p></header><section class="demo-stack"><div class="player-card"><div class="player-caption"><span>English + Español</span><span class="live">Press C for captions</span></div><div class="player-wrap"><video id="player" poster="../../sample.png" preload="metadata" playsinline><source src="../../sample.mp4" type="video/mp4"><track kind="subtitles" label="English" srclang="en" src="./subtitles-en.vtt" default><track kind="subtitles" label="Español" srclang="es" src="./subtitles-es.vtt"></video></div></div><div class="demo-panel"><h2>Use native &lt;track&gt; markup</h2><p>Sopplayer uses the browser’s text tracks and exposes caption selection through the player UI and API.</p><div class="site-code"><button class="code-copy" type="button" data-copy-target="caption-code">Copy</button><pre><code id="caption-code">&lt;video id=&quot;player&quot; src=&quot;video.mp4&quot; playsinline&gt;
+  &lt;track kind=&quot;subtitles&quot; label=&quot;English&quot; srclang=&quot;en&quot;
+         src=&quot;subtitles-en.vtt&quot; default&gt;
+  &lt;track kind=&quot;subtitles&quot; label=&quot;Español&quot; srclang=&quot;es&quot;
+         src=&quot;subtitles-es.vtt&quot;&gt;
+&lt;/video&gt;
 
-    <video id="player" poster="../../sample.png" preload="metadata">
-      <source src="../../sample.mp4" type="video/mp4" />
-      <track kind="subtitles" label="English" srclang="en" src="./subtitles-en.vtt" default>
-      <track kind="subtitles" label="Español" srclang="es" src="./subtitles-es.vtt">
-      <p>Your browser does not support HTML5 video.</p>
-    </video>
-
-    <div class="card">
-      <h3>How Subtitles are Configured</h3>
-      <p style="color: #94a3b8;">Simply add standard HTML5 <code>&lt;track&gt;</code> elements inside your <code>&lt;video&gt;</code> tag:</p>
-      <pre><code>&lt;video id="my-video" src="video.mp4"&gt;
-  &lt;track kind="subtitles" label="English" srclang="en" src="subtitles-en.vtt" default&gt;
-  &lt;track kind="subtitles" label="Español" srclang="es" src="subtitles-es.vtt"&gt;
-&lt;/video&gt;</code></pre>
-    </div>
-  </div>
-
-  <script src="../../dist/sopplayer.min.js"></script>
-  <script>
-    const player = new Sopplayer('#player');
-  </script>
-</body>
-</html>
+&lt;script&gt;
+  const player = new Sopplayer('#player');
+  player.setTrack(0);
+&lt;/script&gt;</code></pre></div></div></section><script src="../../dist/sopplayer.min.js"></script><script>new Sopplayer('#player')</script></div></main><footer class="footer"><div class="container footer-row"><div><div class="footer-brand">Sopplayer</div><p class="footer-copy">Open-source HTML5 video player · Built by <a href="https://sh20raj.github.io/" target="_blank" rel="noopener">Shaswat Raj</a>.</p></div><div class="footer-links"><a href="../../docs/">Docs</a><a href="../../v1/">V1</a><a href="../../players/">Themes</a><a href="https://github.com/SH20RAJ/Sopplayer" target="_blank" rel="noopener">GitHub</a></div></div></footer><script src="../../site.js" defer></script></body></html>
