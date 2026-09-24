@@ -1,0 +1,32 @@
+# Sopplayer
+
+> A lightweight, accessible HTML5 video player with zero runtime dependencies.
+
+## Website
+- https://sh20raj.github.io/Sopplayer/
+- https://sh20raj.github.io/Sopplayer/docs/
+- https://sh20raj.github.io/Sopplayer/demo/
+- https://sh20raj.github.io/Sopplayer/players/
+- https://sh20raj.github.io/Sopplayer/v1/
+
+## Source
+- https://github.com/SH20RAJ/Sopplayer
+
+## Capabilities
+- Native HTML5 video element integration
+- Responsive controls
+- Keyboard shortcuts
+- Captions and WebVTT
+- Fullscreen and Picture-in-Picture
+- Eight CSS themes, including duolingo
+- Video.js-shaped V1 compatibility adapter
+- CDN, npm, ES module, React/Next.js and Vue patterns
+
+## Documentation topics
+- Getting started
+- API reference
+- Configuration
+- Theming
+- Accessibility
+- Migration
+- Security
