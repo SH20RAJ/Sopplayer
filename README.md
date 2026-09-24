@@ -489,3 +489,5 @@ Sopplayer is open-source software licensed under the [MIT License](./LICENSE).
   <p>Built with ❤️ by <a href="https://sh20raj.github.io/"><strong>Shaswat Raj</strong></a> (@SH20RAJ)</p>
   <p>If you find Sopplayer useful, please give it a ⭐️ on <a href="https://github.com/SH20RAJ/Sopplayer">GitHub</a>!</p>
 </div>
+
+<!-- CI verification marker -->
