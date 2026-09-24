@@ -2,6 +2,7 @@
 (function(){
   const PRISM_JS='https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js';
   const PRISM_CSS='https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css';
+  const PRISM_BASH='https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js';
 
   function initNavigation(){
     const button=document.querySelector('.site-menu'),nav=document.querySelector('.site-links');
