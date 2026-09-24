@@ -417,7 +417,7 @@ export class Sopplayer extends EventEmitter {
   }
 
   setTheme(themeName) {
-    const validThemes = ['default', 'flamingo', 'forest', 'city', 'sea', 'fantasy', 'minimal'];
+    const validThemes = ['default', 'flamingo', 'forest', 'city', 'sea', 'fantasy', 'minimal', 'duolingo'];
     for (const t of validThemes) {
       this.container.classList.remove(`sp-theme-${t}`);
     }
