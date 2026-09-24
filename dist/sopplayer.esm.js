@@ -1391,7 +1391,7 @@ var _Sopplayer = class _Sopplayer extends EventEmitter {
     this.video.poster = safeUrl;
   }
   setTheme(themeName) {
-    const validThemes = ["default", "flamingo", "forest", "city", "sea", "fantasy", "minimal"];
+    const validThemes = ["default", "flamingo", "forest", "city", "sea", "fantasy", "minimal", "duolingo", "duolingo"];
     for (const t of validThemes) {
       this.container.classList.remove(`sp-theme-${t}`);
     }
