@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added the Duolingo-inspired `duolingo` player skin and eight-theme system.
+- Added the shared website design system, syntax-highlighted examples, V1 demo and structured documentation pages.
+- Added crawlability assets: `robots.txt`, `sitemap.xml`, `site.webmanifest`, and `llms.txt`.
+
+
 All notable changes to the **Sopplayer** project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
