@@ -8,7 +8,7 @@
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-%3C40%20KB%20min-10b981.svg?style=flat-square)](https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js)
 [![Gzip Size](https://img.shields.io/badge/gzipped-~11%20KB-059669.svg?style=flat-square)](https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js)
 [![Dependencies](https://img.shields.io/badge/dependencies-0%20(Pure%20JS)-818cf8.svg?style=flat-square)](https://github.com/SH20RAJ/Sopplayer/blob/main/package.json)
-[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-a855f7.svg?style=flat-square)](https://sh20raj.github.io/Sopplayer/demo/accessibility/)
+[![Docs](https://img.shields.io/badge/docs-Sopplayer%20Docs-58cc02?style=flat-square)](https://sh20raj.github.io/Sopplayer/docs/)\n[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-a855f7.svg?style=flat-square)](https://sh20raj.github.io/Sopplayer/demo/accessibility/)
 [![License](https://img.shields.io/badge/license-MIT-64748b.svg?style=flat-square)](./LICENSE)
 [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/gh/SH20RAJ/Sopplayer/badge)](https://www.jsdelivr.com/package/gh/SH20RAJ/Sopplayer)
 [![Build Status](https://img.shields.io/badge/tests-18%20passing-brightgreen.svg?style=flat-square)](https://github.com/SH20RAJ/Sopplayer/actions)
@@ -40,7 +40,7 @@
   - [4. Vue 3](#4-vue-3)
   - [5. Svelte](#5-svelte)
   - [6. Declarative HTML5 Drop-in](#6-declarative-html5-drop-in)
-- [🎨 Theming & CSS Custom Properties](#-theming--css-custom-properties)
+- [🎨 Theming & CSS Custom Properties](#-theming--css-custom-properties)\n- [📚 Official Docs](https://sh20raj.github.io/Sopplayer/docs/)\n- [🧩 V1 Compatibility Demo](https://sh20raj.github.io/Sopplayer/v1/)
 - [⌨️ Keyboard Shortcuts](#️-keyboard-shortcuts)
 - [📖 API Reference](#-api-reference)
   - [Constructor Options](#constructor-options)
@@ -62,7 +62,7 @@ Sopplayer is a next-generation HTML5 video player built specifically for web dev
 - 🪶 **Zero Runtime Dependencies**: Written in pure, modular JavaScript. Minified bundle size is **under 40 KB** (and ~11 KB gzipped) — **95% smaller** than legacy Video.js stacks.
 - ♿ **Audited WCAG 2.1 AA Accessibility**: Engineered with accessible semantics: ARIA progress sliders (`role="slider"`), auditory screen reader announcements (`aria-live="polite"`), high-contrast visible focus outlines, and full `prefers-reduced-motion` compliance.
 - ⌨️ **Comprehensive Keyboard Navigation**: Control playback (<kbd>Space</kbd>/<kbd>K</kbd>), seeking (<kbd>&larr;</kbd>/<kbd>&rarr;</kbd>, <kbd>J</kbd>/<kbd>L</kbd>, <kbd>0</kbd>&ndash;<kbd>9</kbd>), volume (<kbd>&uarr;</kbd>/<kbd>&darr;</kbd>, <kbd>M</kbd>), fullscreen (<kbd>F</kbd>), Picture-in-Picture (<kbd>P</kbd>), and shortcuts cheat sheet (<kbd>?</kbd>).
-- 🎨 **Modern Design System & 7 Built-in Themes**: Driven entirely by CSS Custom Properties. Includes `Default` (Obsidian Glass), `Flamingo` (Coral / Rose), `Forest` (Emerald), `City` (Urban Ruby), `Sea` (Azure), `Fantasy` (Neon Cyberpunk), and `Minimal` (Monochrome).
+- 🎨 **Modern Design System & 8 Built-in Themes**: Driven entirely by CSS Custom Properties. Includes `Default` (Obsidian Glass), `Duolingo` (playful green/yellow), `Flamingo` (Coral / Rose), `Forest` (Emerald), `City` (Urban Ruby), `Sea` (Azure), `Fantasy` (Neon Cyberpunk), and `Minimal` (Monochrome).
 - 🔒 **Secure by Default**: Completely eliminated unsafe `innerHTML` concatenation with untrusted URLs, sanitizes media protocols against `javascript:` pseudo-protocol injection, and isolates error handling across event loops.
 - 🔄 **100% Backwards Compatible**: Existing CDN URLs (`cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/...`), legacy `<video class="sopplayer" data-setup="...">` tags, and Video.js 7.x API wrappers continue working seamlessly.
 
@@ -75,7 +75,7 @@ Sopplayer is a next-generation HTML5 video player built specifically for web dev
 | **Bundle Size (minified)** | **< 40 KB** | ~ 460 KB | ~ 125 KB | ~ 320 KB |
 | **Bundle Size (gzipped)** | **~ 11 KB** | ~ 125 KB | ~ 38 KB | ~ 85 KB |
 | **Runtime Dependencies** | **0** | 14+ | 2 | 5+ |
-| **Built-in Themes** | **7 Themes** | 0 (Plugins) | 1 Theme | 0 (Custom CSS) |
+| **Built-in Themes** | **8 Themes** | 0 (Plugins) | 1 Theme | 0 (Custom CSS) |
 | **WCAG 2.1 AA Audited** | **Built-in** | Yes | Partial | Partial |
 | **Auditory Live Region** | **Yes (`aria-live`)** | Plugins | No | No |
 | **Keyboard Shortcuts Cheat Sheet** | **Built-in (`?`)** | No | No | No |
