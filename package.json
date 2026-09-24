@@ -58,6 +58,6 @@
   "homepage": "https://sh20raj.github.io/Sopplayer/",
   "devDependencies": {
     "clean-css": "^5.3.3",
-    "esbuild": "^0.25.0"
+    "esbuild": "^0.28.2"
   }
 }
