@@ -41,3 +41,8 @@ const player = new Sopplayer('#my-video', {
   theme: 'cyber'
 });
 ```
+
+
+## `duolingo`
+
+Playful green/yellow player skin with rounded, tactile controls. See the live showcase at `https://sh20raj.github.io/Sopplayer/demo/themes/?theme=duolingo`.
