@@ -1,0 +1,10 @@
+{
+  "name":"Sopplayer",
+  "short_name":"Sopplayer",
+  "start_url":"/Sopplayer/",
+  "display":"standalone",
+  "background_color":"#fffdf6",
+  "theme_color":"#58cc02",
+  "description":"A lightweight, accessible HTML5 video player.",
+  "icons":[{"src":"/Sopplayer/svg/play.svg","sizes":"any","type":"image/svg+xml"}]
+}
