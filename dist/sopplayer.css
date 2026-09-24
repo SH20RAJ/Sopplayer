@@ -700,3 +700,24 @@ video.video-js {
   --sp-color-primary-glow: rgba(255, 255, 255, 0.3);
   --sp-focus-ring: 2px solid #ffffff
 }
+.sp-player.sp-theme-duolingo {
+  --sp-color-bg: rgba(29, 42, 31, 0.96);
+  --sp-color-surface: rgba(43, 64, 45, 0.9);
+  --sp-color-surface-hover: rgba(88, 204, 2, 0.2);
+  --sp-color-border: rgba(255, 255, 255, 0.14);
+  --sp-color-primary: #58cc02;
+  --sp-color-primary-hover: #46ad00;
+  --sp-color-primary-glow: rgba(88, 204, 2, 0.42);
+  --sp-color-track: rgba(255, 255, 255, 0.17);
+  --sp-color-buffer: rgba(255, 255, 255, 0.3);
+  --sp-focus-ring: 3px solid #ffc800;
+  --sp-radius-xs: 7px;
+  --sp-radius-sm: 10px;
+  --sp-radius-md: 14px;
+  --sp-radius-lg: 18px;
+  --sp-radius-full: 9999px
+}
+.sp-player.sp-theme-duolingo .sp-big-play-button {
+  background: #58cc02;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.16), 0 8px 20px rgba(88, 204, 2, 0.28)
+}
