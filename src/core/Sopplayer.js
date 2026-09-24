@@ -43,6 +43,7 @@ export class Sopplayer extends EventEmitter {
     super();
 
     this.options = { ...Sopplayer.defaults, ...options };
+    this._domEventCleanups = [];
     this._resolveVideoElement(target);
     this._initContainer();
     this._initComponents();
@@ -182,10 +183,15 @@ export class Sopplayer extends EventEmitter {
     }
   }
 
+  _listen(target, eventName, handler, options) {
+    target.addEventListener(eventName, handler, options);
+    this._domEventCleanups.push(() => target.removeEventListener(eventName, handler, options));
+  }
+
   _bindMediaEvents() {
     const v = this.video;
 
-    v.addEventListener('play', () => {
+    this._listen(v, 'play', () => {
       this.container.classList.add('sp-playing');
       this.container.classList.remove('sp-paused', 'sp-ended');
       this.playToggle.setPlaying(true);
@@ -194,7 +200,7 @@ export class Sopplayer extends EventEmitter {
       this.emit('play');
     });
 
-    v.addEventListener('pause', () => {
+    this._listen(v, 'pause', () => {
       this.container.classList.remove('sp-playing');
       this.container.classList.add('sp-paused');
       this.playToggle.setPlaying(false);
@@ -203,7 +209,7 @@ export class Sopplayer extends EventEmitter {
       this.emit('pause');
     });
 
-    v.addEventListener('ended', () => {
+    this._listen(v, 'ended', () => {
       this.container.classList.remove('sp-playing');
       this.container.classList.add('sp-ended');
       this.playToggle.setEnded();
@@ -213,7 +219,7 @@ export class Sopplayer extends EventEmitter {
       this.emit('ended');
     });
 
-    v.addEventListener('timeupdate', () => {
+    this._listen(v, 'timeupdate', () => {
       const current = v.currentTime;
       const duration = v.duration || 0;
       const percent = duration > 0 ? (current / duration) * 100 : 0;
@@ -223,7 +229,7 @@ export class Sopplayer extends EventEmitter {
       this.emit('timeupdate', { currentTime: current, duration });
     });
 
-    v.addEventListener('progress', () => {
+    this._listen(v, 'progress', () => {
       if (v.buffered.length > 0 && v.duration > 0) {
         const bufferedEnd = v.buffered.end(v.buffered.length - 1);
         const percent = (bufferedEnd / v.duration) * 100;
@@ -231,31 +237,31 @@ export class Sopplayer extends EventEmitter {
       }
     });
 
-    v.addEventListener('volumechange', () => {
+    this._listen(v, 'volumechange', () => {
       this.volumeControl.update(v.volume, v.muted);
       this.emit('volumechange', { volume: v.volume, muted: v.muted });
     });
 
-    v.addEventListener('ratechange', () => {
+    this._listen(v, 'ratechange', () => {
       this.emit('ratechange', v.playbackRate);
     });
 
-    v.addEventListener('waiting', () => {
+    this._listen(v, 'waiting', () => {
       this.spinner.show();
       this.emit('waiting');
     });
 
-    v.addEventListener('playing', () => {
+    this._listen(v, 'playing', () => {
       this.spinner.hide();
       this.emit('playing');
     });
 
-    v.addEventListener('canplay', () => {
+    this._listen(v, 'canplay', () => {
       this.spinner.hide();
       this.emit('canplay');
     });
 
-    v.addEventListener('error', () => {
+    this._listen(v, 'error', () => {
       this.spinner.hide();
       const err = v.error ? v.error.message : 'Unknown playback error';
       this.errorDisplay.show(`Error: ${err}`);
@@ -263,7 +269,7 @@ export class Sopplayer extends EventEmitter {
     });
 
     // Clicking video directly toggles play
-    v.addEventListener('click', () => {
+    this._listen(v, 'click', () => {
       this.togglePlay();
     });
   }
@@ -282,13 +288,14 @@ export class Sopplayer extends EventEmitter {
       }
     };
 
-    this.container.addEventListener('mousemove', onActivity);
-    this.container.addEventListener('touchstart', onActivity, { passive: true });
-    this.container.addEventListener('mouseleave', () => {
+    this._listen(this.container, 'mousemove', onActivity);
+    this._listen(this.container, 'touchstart', onActivity, { passive: true });
+    const onLeave = () => {
       if (!this.video.paused && !this.settingsMenu.isOpen) {
         this.hideControls();
       }
-    });
+    };
+    this._listen(this.container, 'mouseleave', onLeave);
   }
 
   showControls() {
@@ -421,6 +428,8 @@ export class Sopplayer extends EventEmitter {
 
   destroy() {
     clearTimeout(this._hideTimeout);
+    for (const cleanup of this._domEventCleanups) cleanup();
+    this._domEventCleanups.length = 0;
     if (this.shortcuts) this.shortcuts.destroy();
     if (this.fullscreenManager) this.fullscreenManager.destroy();
     if (this.pipManager) this.pipManager.destroy();
@@ -432,6 +441,9 @@ export class Sopplayer extends EventEmitter {
     if (parent) {
       parent.insertBefore(this.video, this.container);
       parent.removeChild(this.container);
+    }
+    if (this.video._sopplayer === this) {
+      delete this.video._sopplayer;
     }
     this.removeAllListeners();
   }
