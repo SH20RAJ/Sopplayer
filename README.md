@@ -72,9 +72,9 @@ Use the repository above as the canonical source for issues, releases, source li
 Sopplayer is a next-generation HTML5 video player built specifically for web developers who want exceptional media playback without the baggage of heavy frameworks, complex build chains, or security hazards.
 
 - 🪶 **Zero Runtime Dependencies**: Written in pure, modular JavaScript. Minified bundle size is **under 40 KB** (and ~11 KB gzipped) — **95% smaller** than legacy Video.js stacks.
-- ♿ **Audited WCAG 2.1 AA Accessibility**: Engineered with accessible semantics: ARIA progress sliders (`role="slider"`), auditory screen reader announcements (`aria-live="polite"`), high-contrast visible focus outlines, and full `prefers-reduced-motion` compliance.
+- ♿ **Accessibility-focused controls**: Engineered with accessible semantics: ARIA progress sliders (`role="slider"`), auditory screen reader announcements (`aria-live="polite"`), high-contrast visible focus outlines, and full `prefers-reduced-motion` compliance.
 - ⌨️ **Comprehensive Keyboard Navigation**: Control playback (<kbd>Space</kbd>/<kbd>K</kbd>), seeking (<kbd>&larr;</kbd>/<kbd>&rarr;</kbd>, <kbd>J</kbd>/<kbd>L</kbd>, <kbd>0</kbd>&ndash;<kbd>9</kbd>), volume (<kbd>&uarr;</kbd>/<kbd>&darr;</kbd>, <kbd>M</kbd>), fullscreen (<kbd>F</kbd>), Picture-in-Picture (<kbd>P</kbd>), and shortcuts cheat sheet (<kbd>?</kbd>).
-- 🎨 **Modern Design System & 8 Built-in Themes**: Driven entirely by CSS Custom Properties. Includes `Default` (Obsidian Glass), `Duolingo` (playful green/yellow), `Flamingo` (Coral / Rose), `Forest` (Emerald), `City` (Urban Ruby), `Sea` (Azure), `Fantasy` (Neon Cyberpunk), and `Minimal` (Monochrome).
+- 🎨 **Modern Design System & 7 Built-in Themes**: Driven entirely by CSS Custom Properties. Includes `Default` (Obsidian Glass), `Flamingo` (Coral / Rose), `Forest` (Emerald), `City` (Urban Ruby), `Sea` (Azure), `Fantasy` (Neon Cyberpunk), and `Minimal` (Monochrome).
 - 🔒 **Secure by Default**: Completely eliminated unsafe `innerHTML` concatenation with untrusted URLs, sanitizes media protocols against `javascript:` pseudo-protocol injection, and isolates error handling across event loops.
 - 🔄 **100% Backwards Compatible**: Existing CDN URLs (`cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/...`), legacy `<video class="sopplayer" data-setup="...">` tags, and Video.js 7.x API wrappers continue working seamlessly.
 
@@ -87,8 +87,8 @@ Sopplayer is a next-generation HTML5 video player built specifically for web dev
 | **Bundle Size (minified)** | **< 40 KB** | ~ 460 KB | ~ 125 KB | ~ 320 KB |
 | **Bundle Size (gzipped)** | **~ 11 KB** | ~ 125 KB | ~ 38 KB | ~ 85 KB |
 | **Runtime Dependencies** | **0** | 14+ | 2 | 5+ |
-| **Built-in Themes** | **8 Themes** | 0 (Plugins) | 1 Theme | 0 (Custom CSS) |
-| **WCAG 2.1 AA Audited** | **Built-in** | Yes | Partial | Partial |
+| **Built-in Themes** | **7 Themes** | 0 (Plugins) | 1 Theme | 0 (Custom CSS) |
+| **Accessibility support** | **Keyboard and screen-reader support** | Yes | Partial | Partial |
 | **Auditory Live Region** | **Yes (`aria-live`)** | Plugins | No | No |
 | **Keyboard Shortcuts Cheat Sheet** | **Built-in (`?`)** | No | No | No |
 | **Video.js v1 API Compatibility** | **Built-in Adapter** | N/A | No | No |
