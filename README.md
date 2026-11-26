@@ -8,7 +8,8 @@
 [![Bundle Size](https://img.shields.io/badge/bundle%20size-%3C40%20KB%20min-10b981.svg?style=flat-square)](https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js)
 [![Gzip Size](https://img.shields.io/badge/gzipped-~11%20KB-059669.svg?style=flat-square)](https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js)
 [![Dependencies](https://img.shields.io/badge/dependencies-0%20(Pure%20JS)-818cf8.svg?style=flat-square)](https://github.com/SH20RAJ/Sopplayer/blob/main/package.json)
-[![Docs](https://img.shields.io/badge/docs-Sopplayer%20Docs-58cc02?style=flat-square)](https://sh20raj.github.io/Sopplayer/docs/)\n[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-a855f7.svg?style=flat-square)](https://sh20raj.github.io/Sopplayer/demo/accessibility/)
+[![Docs](https://img.shields.io/badge/docs-Sopplayer%20Docs-58cc02?style=flat-square)](https://sh20raj.github.io/Sopplayer/docs/)
+[![Accessibility](https://img.shields.io/badge/accessibility-WCAG%202.1%20AA-a855f7.svg?style=flat-square)](https://sh20raj.github.io/Sopplayer/demo/accessibility/)
 [![License](https://img.shields.io/badge/license-MIT-64748b.svg?style=flat-square)](./LICENSE)
 [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/gh/SH20RAJ/Sopplayer/badge)](https://www.jsdelivr.com/package/gh/SH20RAJ/Sopplayer)
 [![Build Status](https://img.shields.io/badge/tests-18%20passing-brightgreen.svg?style=flat-square)](https://github.com/SH20RAJ/Sopplayer/actions)
@@ -29,6 +30,16 @@
 
 ---
 
+
+## Canonical project URLs
+
+- **Source repository:** [github.com/SH20RAJ/Sopplayer](https://github.com/SH20RAJ/Sopplayer)
+- **Live documentation and demos:** [sh20raj.github.io/Sopplayer](https://sh20raj.github.io/Sopplayer/)
+- **Versioned JavaScript CDN:** `https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.js`
+- **Versioned CSS CDN:** `https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer@v2.0.0/dist/sopplayer.min.css`
+
+Use the repository above as the canonical source for issues, releases, source links, and CDN examples.
+
 ## 🧭 Navigation
 
 - [⚡ Why Sopplayer?](#-why-sopplayer)
@@ -40,7 +51,8 @@
   - [4. Vue 3](#4-vue-3)
   - [5. Svelte](#5-svelte)
   - [6. Declarative HTML5 Drop-in](#6-declarative-html5-drop-in)
-- [🎨 Theming & CSS Custom Properties](#-theming--css-custom-properties)\n- [📚 Official Docs](https://sh20raj.github.io/Sopplayer/docs/)\n- [🧩 V1 Compatibility Demo](https://sh20raj.github.io/Sopplayer/v1/)
+- [🎨 Theming & CSS Custom Properties](#-theming--css-custom-properties)
+- [📚 Official Docs](https://sh20raj.github.io/Sopplayer/docs/)\n- [🧩 V1 Compatibility Demo](https://sh20raj.github.io/Sopplayer/v1/)
 - [⌨️ Keyboard Shortcuts](#️-keyboard-shortcuts)
 - [📖 API Reference](#-api-reference)
   - [Constructor Options](#constructor-options)
